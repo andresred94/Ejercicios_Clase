@@ -13,6 +13,8 @@ public class MostrarTabla {
         for (int i = 1; i <= 10; i++) {
             multi = numIngresado * i;
             System.out.println( i + " x " + numIngresado + " = " + multi);
+        //prueba
+
         }
 
 
