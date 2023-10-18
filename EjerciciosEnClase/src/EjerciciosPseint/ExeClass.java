@@ -1,6 +1,6 @@
 package EjerciciosPseint;
 
-public class EjecucionClases {
+public class ExeClass {
     public static void main(String[] args) {
         //MostrarCuadrados.calcularCuadrado();
         //MostrarTabla.calcularTabla();
