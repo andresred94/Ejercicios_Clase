@@ -2,7 +2,7 @@ package EjerciciosPseint;
 
 import java.util.Scanner;
 
-public class CalcularFondo {
+public class CalcularInversion {
 
     //atributos
     private static Scanner lector = new Scanner(System.in);
