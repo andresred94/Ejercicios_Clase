@@ -5,10 +5,12 @@ public class EjecucionClases {
         //MostrarCuadrados.calcularCuadrado();
         //MostrarTabla.calcularTabla();
         //CalcularFondo.ejecutarPrograma();
-        //CalcularPrimo.ejecutarPrograma();
+        CalcularPrimo.ejecutarPrograma();
         //CalcularDistancia.ejecutarPrograma();// A(2,1) B(-3,2) = 5,09
         //AdivinarNumero.ejecutarPrograma();
-        PiedraPapeTijeras.ejecutarPrograma();
+        //PiedraPapeTijeras.ejecutarPrograma();
+        //BucleCancion.ejecutarPrograma();
+
 
 
 

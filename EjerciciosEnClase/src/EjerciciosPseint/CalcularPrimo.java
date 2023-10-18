@@ -17,7 +17,6 @@ public class CalcularPrimo {
 
         // lectura de datos
         numUser = obtenerNumero();
-        System.out.println("El número ingresado es "+ numUser);
 
         // controlar que no sea negativo
         if (numUser <= 1) {
