@@ -21,17 +21,17 @@ public class CalcularPrimo {
 
         // controlar que no sea negativo
         if (numUser <= 1) {
-            System.out.println("No es un número primo.");
-            return;
+            System.out.println("Error: no es un número válido, vuelve a ingresar otro");
+            numUser = obtenerNumero();
         }
 
         // mientras que el contador sea menor que el numero ingresado y esPrimo = true
         while ( contador < numUser && esPrimo) {
 
             // comprueba que el resto sea igual a 0
-            // si ingresas 4 al dividirlo entre 2 sales del bucle porque un primo solo tiene 1 divisor exacto
             if (numUser % contador == 0) {
-               esPrimo = false;
+               // si hay más de dos divisiones con resto 0 entonces NO es primo
+                esPrimo = false;
             }
 
             contador++;
