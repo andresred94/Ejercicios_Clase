@@ -8,16 +8,16 @@ public class DecimalBinario {
 
     //-- METODOS PRINCIPALES --//
     public static void ejecutarPrograma (){
-        int nIngresado , resto = 0;
+        int nUser , resto = 0;
         String binario = "";
 
         System.out.println("Ingresa un número decimal para convertir a binario");
-        nIngresado = pedirNumero();
+        nUser = pedirNumero();
 
-        while (nIngresado > 0) {
-            resto = nIngresado % 2;
+        while (nUser > 0) {
+            resto = nUser % 2;
             binario = resto + binario;
-            nIngresado = (int) Math.floor(nIngresado / 2);
+            nUser = (int) Math.floor(nUser / 2);
         }
 
         System.out.println(binario);

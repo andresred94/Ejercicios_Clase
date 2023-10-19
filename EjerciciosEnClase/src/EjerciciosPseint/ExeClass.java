@@ -12,7 +12,8 @@ public class ExeClass {
         //BucleCancion.ejecutarPrograma();
         //CalcularBisiesto.ejecutarPrograma();// 1900 no lo es, 2000 lo es, 2100, 2200, 2300 no lo es, pero 2400 es otro año bisiesto.
         //SecuenciaFibonacci.ejecutarPrograma();
-        DecimalBinario.ejecutarPrograma();
+        //DecimalBinario.ejecutarPrograma();
+        ImprimirTriangulo.ejecutarPrograma();
 
 
 
