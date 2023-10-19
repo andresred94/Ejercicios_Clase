@@ -11,7 +11,8 @@ public class CalcularPrimo {
 
     public static void ejecutarPrograma () {
         // atributos
-        int numUser;
+        int numUser,contador = 2;
+
         // en principio todos son primos a no ser que se demuestre lo contrario
         boolean esPrimo = true;
 
@@ -24,14 +25,16 @@ public class CalcularPrimo {
             return;
         }
 
-        // comprobar todos los números hasta uno menor que el ingresado
-        for (int i = 2; i < numUser; i++) {
+        // mientras que el contador sea menor que el numero ingresado y esPrimo = true
+        while ( contador < numUser && esPrimo) {
 
-            // Solo entra en este bucle si el resto es 0, sino continua comprobando
-            if (numUser % i == 0) {
-                esPrimo = false;//no es primo
-                break; // Salimos del bucle al encontrar un divisor
+            // comprueba que el resto sea igual a 0
+            // si ingresas 4 al dividirlo entre 2 sales del bucle porque un primo solo tiene 1 divisor exacto
+            if (numUser % contador == 0) {
+               esPrimo = false;
             }
+
+            contador++;
 
         }
 
