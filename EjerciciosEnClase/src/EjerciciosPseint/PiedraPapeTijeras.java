@@ -19,7 +19,7 @@ public class PiedraPapeTijeras {
 
         opMaquina = (int) (Math.random() * 2 + 1);
 
-        System.out.println("¿Juegas piedra papel o tijera?");
+        System.out.println("¿Juegas piedra papel o tijeras?");
         resp = jugadaJugador();
 
         switch (resp) {
