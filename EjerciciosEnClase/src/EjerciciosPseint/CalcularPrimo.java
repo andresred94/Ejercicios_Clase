@@ -13,7 +13,7 @@ public class CalcularPrimo {
         // atributos
         int numUser,contador = 2;
 
-        // en principio todos son primos a no ser que se demuestre lo contrario
+        // es primo cuando el resto es 0, es decir cuando se divide entre 1 y el mismo número
         boolean esPrimo = true;
 
         // lectura de datos
@@ -30,7 +30,7 @@ public class CalcularPrimo {
 
             // comprueba que el resto sea igual a 0
             if (numUser % contador == 0) {
-               // si hay más de dos divisiones con resto 0 entonces NO es primo
+               // si hay más de una division con resto 0 entonces NO es primo
                 esPrimo = false;
             }
 
