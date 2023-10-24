@@ -51,6 +51,4 @@ public class ImprimirTriangulo {
 
     }// fin pedirNumero
 
-
-
 }// fin ImprimirTriangulo

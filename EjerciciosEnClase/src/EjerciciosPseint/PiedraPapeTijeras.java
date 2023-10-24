@@ -22,6 +22,8 @@ public class PiedraPapeTijeras {
         System.out.println("¿Juegas piedra papel o tijeras?");
         resp = jugadaJugador();
 
+
+
         switch (resp) {
             case "piedra":
                 jugador = 0;
@@ -32,8 +34,6 @@ public class PiedraPapeTijeras {
             case "tijeras":
                 jugador = 2;
                 break;
-            default:
-                System.out.println("error: no has ingresado una opcion válida");
         }
 
         switch (opMaquina) {
@@ -65,15 +65,28 @@ public class PiedraPapeTijeras {
 
 
     //-- METODOS SECUNDARIOS --//
+
+    /**
+     * pide al usuario que ingrese por telado una cadena de caracteres
+     * @return opIngresada String
+     */
     public static String jugadaJugador() {
         String opIngresada;
 
-        System.out.println("ingresa una de las tres opciones");
+
+        System.out.print("Ingresa una de las tres opciones = ");
         opIngresada = lector.nextLine();
         opIngresada = opIngresada.toLowerCase();
+
+        // control de errores
+        while ( !(opIngresada.equals("piedra")) && !(opIngresada.equals("papel")) && !(opIngresada.equals("tijeras")) ){
+            System.out.print("Error: opcíon no válida, vuelve a ingresar una opción = ");
+            opIngresada = lector.nextLine();
+            opIngresada = opIngresada.toLowerCase();
+        }
 
         return opIngresada;
     }// fin jugadaJugador
 
 
-}
+}// fin-class PiedraPapelTijeras
