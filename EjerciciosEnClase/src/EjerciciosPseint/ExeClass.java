@@ -16,11 +16,5 @@ public class ExeClass {
         //ImprimirTriangulo.ejecutarPrograma();
 
 
-
-
-
-
-
-
     }// fin main
 }// fin EjecucionClases
