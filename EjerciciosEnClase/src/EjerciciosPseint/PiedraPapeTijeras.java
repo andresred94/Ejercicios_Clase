@@ -8,6 +8,7 @@ public class PiedraPapeTijeras {
 
     //-- METODOS PRINCIPALES --//
     public static void ejecutarPrograma() {
+        // atributos
         String resp;
         int jugador = 3, opMaquina, cantPartida, contPartida = 0, puntosUser = 0 , puntosPC = 0 , contador = 0, jugadorGana = 0, pcGana = 0;
 
@@ -16,11 +17,9 @@ public class PiedraPapeTijeras {
         final int TIJERAS = 2;
 
 
-        // lectura de datos
+        // inicio del programa
         System.out.println("¿Jugamos a piedra papel o tijeras?");
-        System.out.println("¿Cuantas partidas quieres jugar? ");
-        cantPartida = lector.nextInt();
-        lector.nextLine();// lee la siguiente linea
+        cantPartida = obCantPartidas();
 
         // Mientras que el contador de las partidas sea menor que la cantidad de partidas jugadas...
         while (contPartida < cantPartida) {
@@ -80,24 +79,39 @@ public class PiedraPapeTijeras {
 
             contador = contador + 1;
 
+            /*-- mensajes de salida después de cada 3 partidas ganadas-- */
             if (pcGana == 3) {
                 puntosPC = puntosPC + 1;
-                System.out.println("Puntos de partida del PC: " + puntosPC);
+                System.out.println("puntos de partida para el PC: " + puntosPC);
                 pcGana = 0;
                 jugadorGana = 0;
                 contPartida = contPartida + 1;
             } else if (jugadorGana == 3) {
                 puntosUser = puntosUser + 1;
-                System.out.println("Puntos de partida del jugador: " + puntosUser);
+                System.out.println("puntos de partida el jugador: " + puntosUser);
                 pcGana = 0;
                 jugadorGana = 0;
                 contPartida = contPartida + 1;
             }
 
-            //todo Falta implementar un contador global para mostrar las partidas jugadas ganas y perdidas
+            /*-- mensajes de salida una vez que se han jugado todas las partidas --*/
+            if (contPartida == cantPartida) {
+                System.out.printf("%nTotal de partidas jugadas: %d" , cantPartida );
+                System.out.printf("%ntotal de partidas ganadas por el PC: %d" , puntosPC);
+                System.out.printf("%ntotal de partidas ganadas por el jugador: %d%n " , puntosUser);
+
+                if ( puntosPC > puntosUser ) {
+                    System.out.println("¡Te ganado el ordeador!");
+                } else {
+                    System.out.println("¡Enhorabuena has ganado!");
+                }
+            }
 
 
         }// fin-while
+
+
+
 
     }// fin ejecutarPrograma
 
@@ -125,6 +139,27 @@ public class PiedraPapeTijeras {
 
         return opIngresada;
     }// fin jugadaJugador
+
+    /**
+     * funcion que pide un numero por teclado
+     * @return cant int
+     */
+    public static int obCantPartidas () {
+
+        int cant;
+        System.out.println("¿Cuantas partidas quieres jugar? ");
+        cant = lector.nextInt();
+        lector.nextLine();
+
+        // control de errores
+        while (cant <= 0){
+            System.out.println("Error: has ingresado una opción no válida, ingresa otro número: ");
+            cant = lector.nextInt();
+            lector.nextLine();
+        }
+
+        return  cant;
+    }
 
 
 }// fin-class PiedraPapelTijeras
