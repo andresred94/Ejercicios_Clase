@@ -45,6 +45,7 @@ public class Ejercicio7 {
         nIngresado = lector.nextDouble ();
 
         return nIngresado;
+
     }// fin-obtNumero
 
 

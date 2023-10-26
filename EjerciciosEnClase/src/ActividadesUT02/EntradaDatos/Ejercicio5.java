@@ -36,6 +36,7 @@ public class Ejercicio5 {
         nIngresado = lector.nextDouble ();
 
         return nIngresado;
+
     }// fin-obtNumero
 
 
