@@ -28,6 +28,7 @@ public class Ejercicio5 {
 
     }
 
+    //-- METODOS SECUNDARIOS --//
     public static double obtNumero (){
 
         double nIngresado;

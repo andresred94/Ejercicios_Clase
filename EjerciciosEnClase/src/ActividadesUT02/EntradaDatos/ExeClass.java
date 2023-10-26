@@ -9,7 +9,8 @@ public class ExeClass {
         //Ejercicio3.ejecutarPrograma ();
         //Ejercicio4.ejecutarPrograma ();
         //Ejercicio5.ejecutarPrograma ();
-        Ejercicio6.ejecutarPrograma ();
+        //Ejercicio6.ejecutarPrograma ();
+        Ejercicio7.ejecutarPrograma ();
 
 
     }
