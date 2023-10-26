@@ -48,5 +48,4 @@ public class Ejercicio7 {
 
     }// fin-obtNumero
 
-
 }//fin-class Ejercicio7

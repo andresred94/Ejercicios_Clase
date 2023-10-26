@@ -26,7 +26,7 @@ public class Ejercicio5 {
         System.out.printf ( "%nEl equivalente en grados Fahrenhait es: %.2f%n" , gFaren );
         System.out.printf ( "%nEl equivalente en grados Reamur es: %.2f%n" , gReamur );
 
-    }
+    }// fin-ejecutarPrograma
 
     //-- METODOS SECUNDARIOS --//
     public static double obtNumero (){
@@ -38,9 +38,5 @@ public class Ejercicio5 {
         return nIngresado;
 
     }// fin-obtNumero
-
-
-
-
 
 }// fin-class Ejercicio5
