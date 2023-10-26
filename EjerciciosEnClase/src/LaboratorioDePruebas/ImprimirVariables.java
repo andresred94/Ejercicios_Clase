@@ -24,7 +24,7 @@ public class ImprimirVariables {
         System.out.printf("%n(esto es un double) %f",c);
         System.out.printf("%n(esto es un String) %s", mensaje);
         System.out.printf("%n(esto es un booleano) %b%n",mentira);
-        System.out.printf("int %d, float %.2f, double %.3f, String %s, boolean %b%n",a,b,c,mensaje,mentira);
+        System.out.printf("int = %d, float = %.2f, double = %.0f, String = %s, boolean = %b%n",a,b,c,mensaje,mentira);
 
 
         /** USANDO println **/
@@ -34,7 +34,7 @@ public class ImprimirVariables {
         System.out.println("(esto es un double) " + c);
         System.out.println("(esto es un String) " + mensaje);
         System.out.println("(esto es un booleano) " + mentira);
-        System.out.println("int " + a + ", float " + b + ", double " + c + ", String " + mensaje + ", boolean " + mentira);
+        System.out.println("int = " + a + ", float = " + b + ", double = " + c + ", String = " + mensaje + ", boolean = " + mentira);
 
 
 
