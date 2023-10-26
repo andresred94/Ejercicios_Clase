@@ -102,7 +102,7 @@ public class PiedraPapeTijeras {
                 System.out.printf ( "%ntotal de partidas ganadas por el jugador: %d%n " , puntosUser );
 
                 if ( puntosPC > puntosUser ) {
-                    System.out.println ( "¡Te ha ganado el ordeador!" );
+                    System.out.println ( "¡Te ha ganado el ordenador!" );
                 } else {
                     System.out.println ( "¡Enhorabuena has ganado!" );
                 }

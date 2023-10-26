@@ -2,8 +2,8 @@ package LaboratorioDePruebas;
 
 public class ExeClass {
     public static void main(String[] args) {
-        ImprimirVariables.ejecutarPrograma();
-
+        //ImprimirVariables.ejecutarPrograma();
+        ComoUsarScanner.ejecutarPrograma();
 
     }// fin main
 
