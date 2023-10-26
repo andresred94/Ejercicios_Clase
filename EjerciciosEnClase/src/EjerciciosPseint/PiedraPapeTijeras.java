@@ -102,29 +102,24 @@ public class PiedraPapeTijeras {
                 System.out.printf ( "%ntotal de partidas ganadas por el jugador: %d%n " , puntosUser );
 
                 if ( puntosPC > puntosUser ) {
-                    System.out.println ( "¡Te ganado el ordeador!" );
+                    System.out.println ( "¡Te ha ganado el ordeador!" );
                 } else {
                     System.out.println ( "¡Enhorabuena has ganado!" );
                 }
             }
-
-
         }// fin-while
-
 
     }// fin ejecutarPrograma
 
 
-    //-- METODOS SECUNDARIOS --//
+    //<-- METODOS SECUNDARIOS -->//
 
     /**
      * pide al usuario que ingrese por telado una cadena de caracteres
-     *
      * @return opIngresada String
      */
     public static String jugadaJugador () {
         String opIngresada;
-
 
         System.out.print ( "Ingresa una de las tres opciones = " );
         opIngresada = lector.nextLine ();
@@ -142,7 +137,6 @@ public class PiedraPapeTijeras {
 
     /**
      * funcion que pide un numero por teclado
-     *
      * @return cant int
      */
     public static int obCantPartidas () {
@@ -153,6 +147,7 @@ public class PiedraPapeTijeras {
         lector.nextLine ();
 
         // control de errores
+        //todo control de error en caso de ingresar enter o un caracter
         while ( cant <= 0 ) {
             System.out.println ( "Error: has ingresado una opción no válida, ingresa otro número: " );
             cant = lector.nextInt ();
@@ -160,7 +155,6 @@ public class PiedraPapeTijeras {
         }
 
         return cant;
-    }
-
+    }// fin obCantPartidas
 
 }// fin-class PiedraPapelTijeras
