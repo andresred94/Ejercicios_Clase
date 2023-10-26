@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ComoUsarScanner {
     public static void ejecutarPrograma(){
-        
+
         char charLeido;
         int a , b;
         Scanner lector = new Scanner(System.in);
@@ -15,6 +15,7 @@ public class ComoUsarScanner {
                 a = lector.nextInt();
         System.out.printf("%nIngresa el segundo entero: ");
                 b = lector.nextInt();
+                lector.close();
         System.out.printf("%nLa suma de ambos numero es %d", a + b);
 
     }// fin-ejecutarPrograma
