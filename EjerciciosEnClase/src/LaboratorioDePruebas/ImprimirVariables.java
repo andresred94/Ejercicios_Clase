@@ -24,14 +24,14 @@ public class ImprimirVariables {
          * %n - para indicar un salto de linea
          */
 
-        System.out.printf("--Usando printf--");
-        System.out.printf("%n(esto es un int) %d",a);
-        System.out.printf("%n(esto es un float) %.4f",b);// muestra decimal con 4 cifras
-        System.out.printf("%n(esto es un double) %.0f",c);// muestra sin decimales
-        System.out.printf("%n(esto es un String en minúscula) %s", mensaje);// muestra el String en minuscula
-        System.out.printf("%n(esto es un String en mayúscula) %S", mensaje);// muestra el String en mayúscula
-        System.out.printf("%n(esto es un booleano) %b",mentira);
-        System.out.printf("%nint = %d, float = %.2f, double = %.0f, String = %s, boolean = %b",a,b,c,mensaje,mentira);
+        System.out.printf( "--Usando printf--" );
+        System.out.printf( "%n(esto es un int) %d" , a );
+        System.out.printf( "%n(esto es un float) %.4f" , b );// muestra decimal con 4 cifras
+        System.out.printf( "%n(esto es un double) %.0f" , c );// muestra sin decimales
+        System.out.printf( "%n(esto es un String en minúscula) %s" , mensaje );// muestra el String en minuscula
+        System.out.printf( "%n(esto es un String en mayúscula) %S" , mensaje );// muestra el String en mayúscula
+        System.out.printf( "%n(esto es un booleano) %b" , mentira );
+        System.out.printf( "%nint = %d, float = %.2f, double = %.0f, String = %s, boolean = %b" , a , b , c , mensaje , mentira );
         System.out.printf ( "%nLa suma de las variables double y float es: %.2f%n", b + c );// muestra la suma con 2 cifras
 
         System.out.printf ( "%n" );//espacio en blanco

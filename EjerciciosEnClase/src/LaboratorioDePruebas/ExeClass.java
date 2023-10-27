@@ -4,7 +4,8 @@ public class ExeClass {
     public static void main(String[] args) {
         ImprimirVariables.ejecutarPrograma();
         //ComoUsarScanner.ejecutarPrograma();
-
+        //MostrarEdad.ejecutarPrograma();
+        //CalcularEdad.ejecutarPrograma();
 
     }// fin main
 
