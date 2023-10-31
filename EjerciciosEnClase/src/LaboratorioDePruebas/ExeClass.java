@@ -6,7 +6,17 @@ public class ExeClass {
         //ComoUsarScanner.ejecutarPrograma();
         //MostrarEdad.ejecutarPrograma();
         //CalcularEdad.ejecutarPrograma();
-        ComprobarDesbordamiento.ejecutarPrograma();
+        //ComprobarDesbordamiento.ejecutarPrograma();
+        //DiaDeLaSemana.ejecutarPrograma ();
+        //CreandoFunciones.ejecutarPrograma ();
+        /**
+        for( int i=0; i < args.length; i++ ){
+            System.out.println("Los argumentos son " + args[i] );
+        }**/
+
+        CalcularAreaCirculo.ejecutarPrograma();
+
+
 
     }// fin main
 

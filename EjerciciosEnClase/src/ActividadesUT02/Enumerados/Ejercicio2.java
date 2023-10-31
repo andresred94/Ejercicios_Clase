@@ -10,14 +10,7 @@ public class Ejercicio2 {
         System.out.println ("Calificaciones de un alumno");
         califAlumno8();
 
-
-
-
     }// fin ejecutarPrograma
-
-
-
-
 
     private static void califAlumno8 () {
 
@@ -47,8 +40,5 @@ public class Ejercicio2 {
         }
 
     }// fin diasLaborales
-
-
-
 
 }// fin-class Ejercicio2

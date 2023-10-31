@@ -16,8 +16,6 @@ public class Ejercicio1 {
         nombre = obtString ();
         System.out.printf ( "%n¡Saludos! %s",nombre );
 
-
-
     }// fin-ejecutarPrograma
 
 

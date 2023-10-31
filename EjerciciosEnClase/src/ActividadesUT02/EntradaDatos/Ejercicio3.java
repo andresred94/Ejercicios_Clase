@@ -7,7 +7,6 @@ public class Ejercicio3 {
     // atributos
     static Scanner lector = new Scanner(System.in);
 
-
     // <-- Metodos pricipales -->
     public static void ejecutarPrograma(){
         int a , b;
@@ -31,10 +30,7 @@ public class Ejercicio3 {
         lector.nextLine ();
 
         return nIngresado;
+
     }// fin-obtNumero
-
-
-
-
 
 }// fin-class LeerDosNumeros

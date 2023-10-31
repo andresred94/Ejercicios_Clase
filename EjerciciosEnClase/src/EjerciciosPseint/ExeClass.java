@@ -15,7 +15,6 @@ public class ExeClass {
         //DecimalBinario.ejecutarPrograma();
         //ImprimirTriangulo.ejecutarPrograma();
 
-
     }// fin main
 
 
