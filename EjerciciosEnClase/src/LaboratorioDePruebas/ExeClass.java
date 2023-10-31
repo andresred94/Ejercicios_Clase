@@ -14,7 +14,8 @@ public class ExeClass {
             System.out.println("Los argumentos son " + args[i] );
         }**/
 
-        CalcularAreaCirculo.ejecutarPrograma();
+        //CalcularAreaCirculo.ejecutarPrograma();
+        MayorEdad.ejecutarPrograma();
 
 
 

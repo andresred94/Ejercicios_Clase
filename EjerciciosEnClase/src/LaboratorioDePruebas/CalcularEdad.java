@@ -19,7 +19,7 @@ public class CalcularEdad {
 
         edad = anioA - anioN;
 
-        System.out.printf("Tu edad actuad es %d", edad);
+        System.out.printf("Tu edad actual es %d", edad);
 
         if (edad > 18) {
             System.out.printf(", eres mayor de edad");
