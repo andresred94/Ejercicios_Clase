@@ -9,10 +9,9 @@ public class ExeClass {
         //Ejercicio4.ejecutarPrograma ();
         //Ejercicio5.ejecutarPrograma ();
         //Ejercicio6.ejecutarPrograma ();
-        //Ejercicio7.ejecutarPrograma ();
+        Ejercicio7.ejecutarPrograma ();
         //todo Ejercicio7 revisar si el coste por km recorrido está bien calculado
-        //prueba desde Intelij
-        //prueba desde Intelij - prueba 2 de commit
+    	//commit desde Eclipse 
 
 
     }// fin main
