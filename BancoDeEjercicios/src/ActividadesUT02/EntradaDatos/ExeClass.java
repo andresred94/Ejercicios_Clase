@@ -11,6 +11,7 @@ public class ExeClass {
         //Ejercicio6.ejecutarPrograma ();
         //Ejercicio7.ejecutarPrograma ();
         //todo Ejercicio7 revisar si el coste por km recorrido está bien calculado
+        //prueba desde Intelij
 
     }// fin main
 }// fin-class ExeClass
