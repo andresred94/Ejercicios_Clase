@@ -20,7 +20,7 @@ public class ContarCifras {
              cifras++;// aumenta en 1 cada division que se hace
         }
 
-        // mensaje de salida
+        // mensaje de salida singular y plural
         if ( cifras > 1 ) {
             System.out.printf ( "%nEl número %d tiene %d cifras." , nIngresado , cifras);
         } else if ( cifras == 1 ) {

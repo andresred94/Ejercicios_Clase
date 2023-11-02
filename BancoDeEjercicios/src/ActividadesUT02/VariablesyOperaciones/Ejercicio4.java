@@ -24,7 +24,7 @@ public class Ejercicio4 {
     }// fin ejecutarPrograma
 
     //<-- metodos secundarios -->//
-    public static double obDecimal (){
+    private static double obDecimal (){
         double n;
         lector.useLocale( Locale.ENGLISH);// permite leer un double con punto
         n = lector.nextDouble ();

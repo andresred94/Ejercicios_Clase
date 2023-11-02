@@ -25,7 +25,7 @@ public class Ejercicio3 {
 
     // <-- metodos secundarios -->//
 
-    public static int obNumero (){
+    private static int obNumero (){
         int n;
         n = lector.nextInt ();
         return n;
