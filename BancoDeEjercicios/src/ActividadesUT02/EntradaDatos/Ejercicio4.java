@@ -17,7 +17,7 @@ public class Ejercicio4 {
         b = lector.nextInt ();
         c = lector.nextInt ();
 
-        System.out.printf ( "%nLa suma de los tres numeros es %d", ((a + b + c ) / 3) );
+        System.out.printf ( "%nLa media de los tres numeros es %d", ((a + b + c ) / 3) );
 
 
     }// fin-ejecutarPrograma

@@ -1,10 +1,11 @@
 package CompararNumeros;
 
-import java.security.PublicKey;
 import java.util.Scanner;
 
 public class MayorNumero {
+    // atributos
     static Scanner lector = new Scanner(System.in);
+    // <-- métodos principales ---> //
 
     public static void ejecutarPrograma () {
         int n1 , n2 ,  n3 , resp ;
@@ -14,11 +15,12 @@ public class MayorNumero {
         n2 = lector.nextInt();
         n3 = lector.nextInt();
 
-        resp = algoritmo1(n1,n2,n3);
+        resp = calcularElmayor (n1,n2,n3);
         System.out.println("El  numero mayor de los tres es: " + resp);
-    }
+    }// fin ejecutarPrograma
 
 
+    // <-- métodos secundarios --> //
     /**
      * funcion a la que se le ingresa tres números como parámetro
      * y comprueba cual es el mayor de los tres
@@ -26,7 +28,9 @@ public class MayorNumero {
      * @param n2
      * @param n3
      */
-    public static int  algoritmo1 (int n1, int n2, int n3){
+    public static int calcularElmayor ( int n1, int n2, int n3){
         return n3 > ( n1 > n2 ? n1 : n2) ? n3 : ( n1 > n2 ? n1 : n2 );
-    }// fin algoritmo2
+        //return Math.max ( n3 , (Math.max ( n1 , n2 )) );//usando método max
+    }// fin numeroMayor
+
 }// fin MayorNumero

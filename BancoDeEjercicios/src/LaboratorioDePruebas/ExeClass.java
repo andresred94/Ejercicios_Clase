@@ -15,8 +15,8 @@ public class ExeClass {
         }**/
 
         //CalcularAreaCirculo.ejecutarPrograma();
-        MayorEdad.ejecutarPrograma();
-
+        //MayorEdad.ejecutarPrograma();
+        ContarCifras.ejecutarPrograma ();
 
 
     }// fin main

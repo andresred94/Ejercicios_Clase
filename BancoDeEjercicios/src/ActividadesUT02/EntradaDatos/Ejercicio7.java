@@ -1,5 +1,6 @@
 package ActividadesUT02.EntradaDatos;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Ejercicio7 {
@@ -9,7 +10,7 @@ public class Ejercicio7 {
 
     // <-- Metodos pricipales -->
     public static void ejecutarPrograma () {
-        double km1 , km2 , pago1 , pago2 , pCombu1 , pCombu2 , tConsumido , tDistancia , tCoste;
+        double km1 , km2 , pago1 , pago2 , pCombu1 , pCombu2 , totalLitros , tDistancia , tCoste;
 
         System.out.printf ("Calculadora del consumo medio de un automovil%n");
         System.out.printf ( "Ingresa la información sobre las tres últimas veces que repostaste%n" );
@@ -28,11 +29,11 @@ public class Ejercicio7 {
         System.out.printf ( "%nTercera vez:%n" );
         System.out.printf ( "¿Cuantos km marcaba el cuenta kilometros? = " );
         km2 = obtNumero ();
-        tConsumido = ((pago1 / pCombu1 ) + (pago2 / pCombu2));
+        totalLitros = ((pago1 / pCombu1 ) + (pago2 / pCombu2));
         tDistancia = km2 - km1;
         tCoste = pago1 + pago2;
 
-        System.out.printf ( "El consumo medio por cada 100 km es = %.2f litros %n", (tConsumido / tDistancia) * 100 );
+        System.out.printf ( "%nEl consumo medio por cada 100 km es = %.2f litros %n", (totalLitros / tDistancia) * 100 );
         System.out.printf ( "El coste por kilometro recorrido es = %.2f €", tCoste / tDistancia );
 
     }//fin-ejecutarPrograma
@@ -41,7 +42,7 @@ public class Ejercicio7 {
     public static double obtNumero (){
 
         double nIngresado;
-
+        lector.useLocale( Locale.ENGLISH);// permite leer un double con punto
         nIngresado = lector.nextDouble ();
 
         return nIngresado;

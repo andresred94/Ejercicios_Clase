@@ -1,9 +1,9 @@
 package CompararNumeros;
 
-public class EjecucionClases {
+public class ExeClass {
     public static void main(String[] args) {
 
-        MayorNumero.ejecutarPrograma();
+        //MayorNumero.ejecutarPrograma();
 
 
     }// fin main

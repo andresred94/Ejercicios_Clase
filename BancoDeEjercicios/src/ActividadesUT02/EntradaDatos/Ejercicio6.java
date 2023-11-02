@@ -29,7 +29,7 @@ public class Ejercicio6 {
         // calcular la distacia con el teorema de pitagoras
         resp = Math.sqrt((ejeX * ejeX) + (ejeY * ejeY));
 
-        System.out.println("La ditancia entre el punto A y el punto B es: " + resp);
+        System.out.printf("La ditancia entre el punto A y el punto B es: %.2f" , resp);
 
     }
 
