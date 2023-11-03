@@ -30,5 +30,4 @@ public class Ejercicio6 {
         return n;
     }// fin obDecimal
 
-
 }// fin-class Ejercicio6

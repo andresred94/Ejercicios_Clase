@@ -37,6 +37,7 @@ public class Ejercicio5 {
     private static int obEntero () {
         int n;
         n = lector.nextInt ();
+        lector.close ();
         return n;
     }// fin obEntero
 
