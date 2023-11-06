@@ -8,7 +8,7 @@ public class ExeClass {
         //CalcularEdad.ejecutarPrograma();
         //ComprobarDesbordamiento.ejecutarPrograma();
         //DiaDeLaSemana.ejecutarPrograma ();
-        //CreandoFunciones.ejecutarPrograma ();
+        CreandoFunciones.ejecutarPrograma ();
         /**
         for( int i=0; i < args.length; i++ ){
             System.out.println("Los argumentos son " + args[i] );
