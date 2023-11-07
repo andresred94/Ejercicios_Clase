@@ -12,7 +12,7 @@ public class Ejercicio3 {
     public static void ejecutarPrograma (){
         double radio , aTotal;
 
-        System.out.printf ( "%nIngresa el radio del circulo para calcular si longitud = " );
+        System.out.printf ( "%nIngresa el radio del circulo para calcular su longitud = " );
         radio = obDecimal ();
         aTotal = 2 * Math.PI * radio;
         System.out.printf ( "La longitud del circulo es: %.2f%n" , aTotal );

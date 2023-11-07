@@ -44,8 +44,6 @@ public class Ejercicio3 {
             System.out.printf ( "%nTu salario esa semana es de %.0f€" , resp );
         }
 
-
-
     }// fin ejecutarPrograma
 
 
