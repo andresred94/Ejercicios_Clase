@@ -11,11 +11,11 @@ public class CreandoFunciones {
         String nomCompleto , nom , ape1 , ape2;
 
         System.out.printf ( "%nIngresa tu nombre = " );
-        nom = pedirPalabra ();
+        nom = leerPalabra ();
         System.out.printf ( "Ingresa tu primer apellido = " );
-        ape1 = pedirPalabra ();
+        ape1 = leerPalabra ();
         System.out.printf ( "Ingresa tu segundo apellido = " );
-        ape2 = pedirPalabra ();
+        ape2 = leerPalabra ();
         nomCompleto = saludo(nom , ape1 , ape2);
         System.out.printf ( "%nBienvenido a mi programa %s.%n" ,  nomCompleto);
 
@@ -42,7 +42,7 @@ public class CreandoFunciones {
     }// fin multiplicarEnteros
 
     private static int restarEnteros (int a , int b){
-        return a - b;
+        return Math.abs ( a - b );
     }// fin restarEnteros
 
     // <-- funciones secundarias -->//
@@ -50,7 +50,7 @@ public class CreandoFunciones {
         return a + b;
     }// fin sumarEnteros
 
-    private static String pedirPalabra () {
+    private static String leerPalabra () {
         String palabra = lector.nextLine ();
         return palabra;
     }// fin pedirNombre
