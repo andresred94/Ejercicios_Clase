@@ -23,8 +23,8 @@ public class Ejercicio6 {
     //<-- métodos principales -->//
     private static String ordenarNumeros (int a, int b, int c){
         int valorMayor = mayorDtres(a, b, c);// primera posicion
-        int valorMedio = 0;
-        int valorMenor = 0;
+        int valorMedio;
+        int valorMenor;
 
         // comprueba la segunda y tercera posicion
         if (a == valorMayor) {
