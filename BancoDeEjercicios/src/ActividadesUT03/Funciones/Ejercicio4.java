@@ -29,10 +29,9 @@ public class Ejercicio4 {
 
     }// fin ejecutarPrograma
 
-
     //<-- métodos secundarios -->//
     private static int aleatorio(int minimo , int maximo){
-        int numAleatorio = (int) (Math.random () * maximo + minimo);
+        int numAleatorio = (int) (Math.random () * (maximo - minimo) + minimo);
         return numAleatorio;
     }// fin aleatorio
 

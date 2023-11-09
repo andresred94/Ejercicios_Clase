@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Ejercicio7 {
 
     // atributos
-    static Scanner lector = new Scanner(System.in);
+    protected static Scanner lector = new Scanner(System.in);
 
     // <-- Metodos pricipales -->
     public static void ejecutarPrograma () {
@@ -39,7 +39,7 @@ public class Ejercicio7 {
     }//fin-ejecutarPrograma
 
     //-- METODOS SECUNDARIOS --//
-    public static double obtNumero (){
+    private static double obtNumero (){
 
         double nIngresado;
         lector.useLocale( Locale.ENGLISH);// permite leer un double con punto

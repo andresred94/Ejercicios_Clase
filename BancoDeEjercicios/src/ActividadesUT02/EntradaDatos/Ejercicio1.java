@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejercicio1 {
 
     //atributos
-    static Scanner lector = new Scanner ( System.in );
+    protected static Scanner lector = new Scanner ( System.in );
 
     // <-- Metodos pricipales -->
     public static void ejecutarPrograma (){
@@ -20,7 +20,7 @@ public class Ejercicio1 {
 
 
     // <-- Metodos secundarios -->
-    public static String obtString (){
+    private static String obtString (){
 
         String nomIntroducido;
 

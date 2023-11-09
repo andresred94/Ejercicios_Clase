@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Ejercicio5 {
     // atributos
-    static Scanner lector = new Scanner(System.in);
+    protected static Scanner lector = new Scanner(System.in);
 
 
     // <-- Metodos pricipales -->
@@ -31,7 +31,7 @@ public class Ejercicio5 {
     }// fin-ejecutarPrograma
 
     //-- METODOS SECUNDARIOS --//
-    public static double obtNumero (){
+    private static double obtNumero (){
 
         double nIngresado;
 

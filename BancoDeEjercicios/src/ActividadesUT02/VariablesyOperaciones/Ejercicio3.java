@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejercicio3 {
 
     // atributos
-    static Scanner lector = new Scanner(System.in);
+    protected static Scanner lector = new Scanner(System.in);
 
     //<-- metodos principales -->//
     public static void ejecutarPrograma(){

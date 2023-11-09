@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejercicio6 {
     // atributos
-    static Scanner lector = new Scanner(System.in);
+    protected static Scanner lector = new Scanner(System.in);
 
     // <-- Metodos pricipales -->
     public static void ejecutarPrograma () {
@@ -42,7 +42,7 @@ public class Ejercicio6 {
      * @param x2 entero
      * @return result entero
      */
-    public static int coorEjeX ( int x1 , int  x2) {
+    private static int coorEjeX ( int x1 , int  x2) {
         int result = x2 - x1;
         return result;
     }// fin coordEjeX
@@ -54,7 +54,7 @@ public class Ejercicio6 {
      * @param y2 entero
      * @return result entero
      */
-    public static int coordEjeY(int y1, int y2){
+    private static int coordEjeY(int y1, int y2){
         int result  = y2 - y1;
         return result;
     }// fin coordEjeY

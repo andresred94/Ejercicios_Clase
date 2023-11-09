@@ -52,8 +52,8 @@ public class Ejercicio3 {
         double resp = horas * pHora;
         return  resp;
     }
+
     private static double pedirDecimal(){
-        //todo ¿Es mejor implementar el control de errores en las pequeñas funciones o en la ejecucion de todas
         lector.useLocale( Locale.ENGLISH);// permite leer un double con punto
         double resp = lector.nextDouble();
         return  resp;
