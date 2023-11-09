@@ -1,4 +1,5 @@
-package ActividadesUT03.EstructuraiF;
+package ActividadesUT03.EstructuraIF;
+
 
 public class ExeClass {
     public static void main ( String[] args ) {
@@ -7,8 +8,11 @@ public class ExeClass {
         //Ejercicio3.ejecutarPrograma ();
         //Ejercicio4.ejecutarPrograma ();
         //Ejercicio5.ejecutarPrograma ();
-        //Ejercicio6.ejecutarProgramara ();
-        Ejercicio7.ejecutarPrograma ();
+        Ejercicio6.ejecutarPrograma ();
+        //Ejercicio7.ejecutarPrograma ();
+        //Ejercicio8.ejecutarPrograma ();
+
+
 
 
 
