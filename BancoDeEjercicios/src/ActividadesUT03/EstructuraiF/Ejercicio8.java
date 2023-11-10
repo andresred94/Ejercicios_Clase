@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 public class Ejercicio8 {
     // atributos
-    private static Scanner lector = new Scanner(System.in);
+    protected static Scanner lector = new Scanner(System.in);
 
+    // <-- metodos principales --> //
     public static void ejecutarPrograma(){
 
         System.out.printf("%nIngresa el número que quieres invertir = ");
@@ -16,7 +17,7 @@ public class Ejercicio8 {
 
     }// fin ejecutarPrograma
 
-
+    // <-- metodos secundarios --> //
     private static int invertirCifras (int numero){
         int cifra , nNumero = 0;
         while (numero != 0){
