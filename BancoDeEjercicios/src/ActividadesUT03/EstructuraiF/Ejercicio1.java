@@ -1,4 +1,4 @@
-package ActividadesUT03.EstructuraiF;
+package ActividadesUT03.EstructuraIF;
 
 import java.util.Scanner;
 
@@ -8,6 +8,7 @@ public class Ejercicio1 {
 
     //<-- métodos principales -->//
     public static void ejecutarPrograma (){
+
         int n1 , n2;
         System.out.printf ( "%nComprueba si dos números son iguales o no...%n" );
         System.out.printf ( "Ingresa el primer número = " );
@@ -19,8 +20,6 @@ public class Ejercicio1 {
         } else {
             System.out.printf ( "%d y %d no son iguales%n" , n1 , n2 );
         }
-
-
 
     }// fin ejecutarPrograma
 
