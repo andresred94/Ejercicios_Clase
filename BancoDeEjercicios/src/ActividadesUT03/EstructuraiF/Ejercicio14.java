@@ -31,11 +31,7 @@ public class Ejercicio14 {
             System.out.printf ( "Año no válido ingresa otro año = " );
             aIn = obEntero ();
         }
-
-
-
         System.out.printf ( "%s" , obtenerDiaSiguiente ( dIn , mIn , aIn ) );
-
 
         lector.close ();
 
@@ -103,16 +99,12 @@ public class Ejercicio14 {
                     dia++;
                     anio++;
                     frase = dia + "-" + mes + "-" + anio;
-                }else {
+                } else {
                     dia++;
                     frase = dia + "-" + mes + "-" + anio;
-
                 }
-
             }
-
         }
-
 
         return frase;
     }// fin obtenerDiaSiguiente
@@ -161,6 +153,5 @@ public class Ejercicio14 {
         }
         return n;
     }// fin obEntero
-
 
 }// fin-class Ejercicio14
