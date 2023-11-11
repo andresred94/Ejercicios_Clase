@@ -2,11 +2,10 @@ package ActividadesUT03.EstructuraIF;
 
 import java.util.Scanner;
 
-public class Ejercicio11 {
+public class Ejercicio13 {
     // atributos
     protected static Scanner lector = new Scanner ( System.in );
 
-    // <-- metodos principales --> //
     public static void ejecutarPrograma(){
         int dIn ,mIn , aIn;
         System.out.printf ( "%nComprueba si una fecha es correcta%n" );
@@ -16,27 +15,32 @@ public class Ejercicio11 {
         mIn = obEntero ();
         System.out.printf ( "Ingresa el año en formato aaaa = " );
         aIn = obEntero ();
+        System.out.printf ( "%s" , obtenerDiaSiguiente ( dIn , mIn , aIn ) );
 
-        if ( esFechaCorrecta ( dIn , mIn , aIn ) ){
-            System.out.printf ( "La fecha ingresada %d-%d-%d es correcta." , dIn , mIn , aIn );
-        } else {
-            System.out.printf ( "La fecha ingresada %d-%d-%d es no correcta." , dIn , mIn , aIn );
-        }
 
         lector.close ();
+
     }// fin ejecutarPrograma
+
+    private static String obtenerDiaSiguiente(int dia , int mes , int anio){
+        String frase = "";
+        if ( esFechaCorrecta ( dia , mes , anio ) ){
+            frase = dia + 1 + "-" + mes + "-" + anio;
+        }
+        return frase;
+    }// fin obtenerDiaSiguiente
 
 
     private static boolean esFechaCorrecta (int dia, int mes, int anio){
         boolean esCierto = false;
-        if ( dia >= 1 && dia <= 30 ){
+        if ( dia >= 1 && dia <= 31 ){
             if ( mes >= 1 && mes <= 12 ){
                 if ( anio >=1 ){
                     esCierto = true;
                 }
             }
         }
-    return esCierto;
+        return esCierto;
     } // fin esFechaCorrecta
 
 
@@ -46,4 +50,4 @@ public class Ejercicio11 {
         return n;
     }// fin obEntero
 
-}// fin-class Ejercicio11
+}// fin-class Ejercicio13

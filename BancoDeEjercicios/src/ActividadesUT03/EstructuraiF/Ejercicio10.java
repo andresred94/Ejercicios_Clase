@@ -17,11 +17,7 @@ public class Ejercicio10 {
             System.out.printf("%sVuelve a ingresar otro valor = " , obtenerNota(nIngresado));
             nIngresado = obEntero010();
         }
-
-
         System.out.printf("%s " , obtenerNota(nIngresado));
-
-
     }// fin ejecutarPrograma
 
 

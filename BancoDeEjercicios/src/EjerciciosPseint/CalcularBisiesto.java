@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 public class CalcularBisiesto {
 
-
-
-
     static Scanner lector = new Scanner(System.in);
 
     //-- METODOS PRINCIPALES --//

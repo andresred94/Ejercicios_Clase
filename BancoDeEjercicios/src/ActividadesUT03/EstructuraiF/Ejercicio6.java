@@ -6,7 +6,6 @@ public class Ejercicio6 {
     // atributos
     protected static Scanner lector = new Scanner ( System.in );
 
-
     public static void ejecutarPrograma () {
         int n1, n2, n3;
         String resp;
@@ -24,7 +23,7 @@ public class Ejercicio6 {
 
     //<-- métodos principales -->//
     private static String ordenarNumeros ( int a , int b , int c ) {
-        int valorMayor = mayorDtres ( a , b , c );// primera posicion
+        int valorMayor = mayordTres ( a , b , c );// primera posicion
         int valorMedio;
         int valorMenor;
 
@@ -45,7 +44,7 @@ public class Ejercicio6 {
     }// fin ordenarNumeros
 
     //<-- métodos secundarios -->//
-    private static int mayorDtres ( int n1 , int n2 , int n3 ) {
+    private static int mayordTres ( int n1 , int n2 , int n3 ) {
         return n3 > (n1 > n2 ? n1 : n2) ? n3 : (n1 > n2 ? n1 : n2);
     }// fin mayorDtres
 

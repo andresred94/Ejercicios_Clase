@@ -2,7 +2,7 @@ package ActividadesUT03.EstructuraIF;
 
 import java.util.Scanner;
 
-public class Ejercicio11 {
+public class Ejercicio12 {
     // atributos
     protected static Scanner lector = new Scanner ( System.in );
 
@@ -29,14 +29,14 @@ public class Ejercicio11 {
 
     private static boolean esFechaCorrecta (int dia, int mes, int anio){
         boolean esCierto = false;
-        if ( dia >= 1 && dia <= 30 ){
+        if ( dia >= 1 && dia <= 31 ){
             if ( mes >= 1 && mes <= 12 ){
                 if ( anio >=1 ){
                     esCierto = true;
                 }
             }
         }
-    return esCierto;
+        return esCierto;
     } // fin esFechaCorrecta
 
 
@@ -46,4 +46,5 @@ public class Ejercicio11 {
         return n;
     }// fin obEntero
 
-}// fin-class Ejercicio11
+
+}// fin-class Ejercicio 12
