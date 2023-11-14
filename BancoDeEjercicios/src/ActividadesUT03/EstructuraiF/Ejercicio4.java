@@ -1,4 +1,4 @@
-package ActividadesUT03.EstructuraiF;
+package ActividadesUT03.EstructuraIF;
 
 import java.util.Scanner;
 
@@ -19,8 +19,6 @@ public class Ejercicio4 {
         } else {
             System.out.printf ( "%d y %d no son múltiplos" , n1 , n2 );
         }
-
-
 
     }// fin ejecutarPrograma
 

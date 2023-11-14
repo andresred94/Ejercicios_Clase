@@ -10,22 +10,20 @@ public class CalcularBisiesto {
     public static void ejecutarPrograma () {
         int anioIngresado , multi4 , multi100 , multi400;
 
-
-        System.out.println("Ingresa un año para comprobar si es bisiesto");
+        System.out.printf("%nIngresa un año para comprobar si es bisiesto = ");
         anioIngresado = pedirAnio();
 
         multi4 = anioIngresado % 4;
         multi100 = anioIngresado % 100;
         multi400 = anioIngresado % 400;
 
-        if (multi4 == 4 && multi100 != 0) {
-            System.out.println(anioIngresado + "es un año bisiesto");
-        } else if (multi100 == 0 && multi400 == 0) {
-            System.out.println("Es un año bisiesto");
+        if (multi400 == 0){
+            System.out.printf("Es bisiesto");
+        } else if (multi4 == 0 && multi100 != 0) {
+            System.out.printf("Es bisiesto");
         } else {
-            System.out.println("No es un año bisiesto");
+            System.out.printf("No es bisiesto");
         }
-
 
     }// fin ejecutarPrograma
 
@@ -43,11 +41,7 @@ public class CalcularBisiesto {
             System.out.println("Error: no has ingresado un año válido");
             anio = lector.nextInt();
         }
-
         return anio;
-    }
-
-
-
+    }// fin pedirAnio
 
 }// final CalcularBisiesto

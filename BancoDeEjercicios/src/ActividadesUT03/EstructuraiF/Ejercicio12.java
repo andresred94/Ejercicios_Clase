@@ -16,11 +16,12 @@ public class Ejercicio12 {
         mIn = obEntero ();
         System.out.printf ( "Ingresa el año en formato aaaa = " );
         aIn = obEntero ();
+        System.out.print(comprobarBisiesto(aIn));
 
         if ( esFechaCorrecta ( dIn , mIn , aIn ) ){
             System.out.printf ( "La fecha ingresada %d-%d-%d es correcta." , dIn , mIn , aIn );
         } else {
-            System.out.printf ( "La fecha ingresada %d-%d-%d es no correcta." , dIn , mIn , aIn );
+            System.out.printf ( "La fecha ingresada %d-%d-%d no correcta." , dIn , mIn , aIn );
         }
 
         lector.close ();
@@ -29,16 +30,55 @@ public class Ejercicio12 {
 
     private static boolean esFechaCorrecta (int dia, int mes, int anio){
         boolean esCierto = false;
-        if ( dia >= 1 && dia <= 31 ){
-            if ( mes >= 1 && mes <= 12 ){
-                if ( anio >=1 ){
-                    esCierto = true;
-                }
+
+        if (comprobarBisiesto(anio)){
+            // año bisiesto con meses con 30 dias
+            if (mes == 4 || mes == 6 || mes == 9 || mes == 11 && dia > 0 && dia <= 30){
+                esCierto = true;
             }
-        }
+            // año bisiesto con meses con 31 dias
+            if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12 && dia > 0 && dia <= 31) {
+                esCierto = true;
+            }
+            // año bisiesto febrero
+            if (mes == 2 && dia > 0 && dia <= 29){
+                esCierto = true;
+            }
+
+        } else { // comprobarBisiesto == false
+            // mes febrero
+            if (mes == 2 && dia > 0 && dia <= 28){
+                esCierto = true;
+            }
+            // meses con 30 dias
+            if (mes == 4 || mes == 6 || mes == 9 || mes == 11 && dia > 0 && dia <= 30){
+                esCierto = true;
+            }
+            // meses con 31 dias
+            if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12 && dia > 0 && dia <= 31) {
+                esCierto = true;
+            }
+        }// fin-if comprobarBisiesto
+
         return esCierto;
     } // fin esFechaCorrecta
 
+    private static boolean comprobarBisiesto(int anio){
+        boolean esCierto;
+        int multi4 , multi100 , multi400;
+        multi4 = anio % 4;
+        multi100 = anio % 100;
+        multi400 = anio % 400;
+
+        if (multi400 == 0){
+            esCierto = true;
+        } else if (multi4 == 0 && multi100 != 0) {
+            esCierto = true;
+        } else {
+            esCierto = false;
+        }
+        return esCierto;
+    }// fin comprobarBisiesto
 
     // <-- metodos secundarios --> //
     private static int obEntero(){

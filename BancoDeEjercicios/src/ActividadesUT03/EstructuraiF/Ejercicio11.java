@@ -29,14 +29,23 @@ public class Ejercicio11 {
 
     private static boolean esFechaCorrecta (int dia, int mes, int anio){
         boolean esCierto = false;
-        if ( dia >= 1 && dia <= 30 ){
-            if ( mes >= 1 && mes <= 12 ){
-                if ( anio >=1 ){
-                    esCierto = true;
-                }
+        if (mes == 2 && dia > 0 && dia <= 28){
+            if (anio > 0){
+                esCierto = true;
             }
         }
-    return esCierto;
+
+        if (mes == 4 || mes == 6 || mes == 9 || mes == 11 && dia > 0 && dia <= 30){
+            if (anio > 0){
+                esCierto = true;
+            }
+        }
+        if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12 && dia > 0 && dia <= 31) {
+            if (anio > 0) {
+                esCierto = true;
+            }
+        }
+        return esCierto;
     } // fin esFechaCorrecta
 
 
