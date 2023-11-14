@@ -15,7 +15,7 @@ public class ExeClass {
         //Ejercicio10.ejecutarPrograma ();
         //Ejercicio11.ejecutarPrograma ();
         //Ejercicio12.ejecutarPrograma ();
-        //Ejercicio13.ejecutarPrograma ();//Todo revisar si está correcto
+        //Ejercicio13.ejecutarPrograma ();
         //Ejercicio14.ejecutarPrograma ();
         //Ejercicio15.ejecutarPrograma ();
         //Ejercicio16.ejecutarPrograma ();

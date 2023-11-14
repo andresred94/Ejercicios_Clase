@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Ejercicio10 {
     // atributos
     protected static Scanner lector = new Scanner ( System.in );
+    private enum Notas {INSUFICIENTE,SUFICIENTE,BIEN,NOTABLE,SOBRESALIENTE,ERROR};
+
     // <-- métodos principales --> //
     public static void ejecutarPrograma(){
         int nIngresado;
@@ -23,27 +25,26 @@ public class Ejercicio10 {
 
     // <-- metodos secundarios --> //
     private static String obtenerNota (int nota){
-        String resp = "";
-        enum califNotas {INSUFICIENTE,SUFICIENTE,BIEN,NOTABLE,SOBRESALIENTE,ERROR};
+        String resp;
 
         switch (nota){
             case 1,2,3,4:
-                resp = "Tu nota es " + califNotas.INSUFICIENTE;
+                resp = "Tu nota es " + Notas.INSUFICIENTE;
                 break;
             case 5:
-                resp = "Tu nota es " + califNotas.SUFICIENTE;
+                resp = "Tu nota es " + Notas.SUFICIENTE;
                 break;
             case 6:
-                resp = "Tu nota es " + califNotas.BIEN;
+                resp = "Tu nota es " + Notas.BIEN;
                 break;
             case 7,8:
-                resp = "Tu nota es " + califNotas.NOTABLE;
+                resp = "Tu nota es " + Notas.NOTABLE;
                 break;
             case 9,10:
-                resp = "Tu nota es " + califNotas.SOBRESALIENTE;
+                resp = "Tu nota es " + Notas.SOBRESALIENTE;
                 break;
             default:
-                resp = califNotas.ERROR + " : nota no válida.";
+                resp = Notas.ERROR + " : nota no válida.";
         }
         return resp;
     }// fin obtenerNota
