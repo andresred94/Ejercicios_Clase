@@ -1,5 +1,6 @@
 package ActividadesUT03.EstructuraIF;
 
+import java.util.EventListener;
 import java.util.Scanner;
 
 public class Ejercicio15 {
@@ -19,14 +20,10 @@ public class Ejercicio15 {
         aIn = obEntero ();
 
         if ( esMayorEdad ( dIn , mIn , aIn ) ){
-            System.out.printf ( "%nEres mayor de edad" );
+            System.out.printf ( "Eres mayor de edad" );
         } else {
-            System.out.printf ( "%nNo eres mayor de edad" );
+            System.out.printf ( "No eres mayor de edad" );
         }
-
-
-
-
     }// fin ejecutarPrograma
 
 
@@ -37,36 +34,23 @@ public class Ejercicio15 {
         int anioActual  = localDate.getYear();
         int mesActual = localDate.getMonthValue();
         int diaActual   = localDate.getDayOfMonth();
-        boolean esCierto = false;
+        boolean esCierto;
 
         int restoAnios = anioActual - anio;
         int restoMeses = Math.abs ( mesActual - mes );
         int restoDias = Math.abs ( diaActual - dia );
 
-        System.out.printf ( "dia %d mes %d año %d" , restoDias , restoMeses , restoAnios);
-
-        if ( restoAnios >= 18 ){
+        // Verificar si la persona ha cumplido 18 años o está a punto de cumplirlos
+        if (restoAnios > 18 || (restoAnios == 18 && (mesActual > mes || (mesActual == mes && diaActual >= dia)))) {
             esCierto = true;
-        } else if ( restoAnios <= 18 && restoMeses <= 12  && restoDias <= 31 ){
+        } else {
+            //System.out.printf ( "Te quedan  %d dia(s), %d mese(s) y %d año(s) para ser mayor de edad" , restoDias , restoMeses , restoAnios);
             esCierto = false;
         }
-
         return esCierto;
-    }
+    }// fin esMayorEdad
 
     // <-- metodos secundarios --> //
-    private static boolean esFechaCorrecta ( int dia , int mes , int anio ) {
-        boolean esCierto = false;
-        if ( dia >= 1 && dia <= 31 ) {
-            if ( mes >= 1 && mes <= 12 ) {
-                if ( anio >= 1 ) {
-                    esCierto = true;
-                }
-            }
-        }
-        return esCierto;
-    } // fin esFechaCorrecta
-
     private static int obEntero () {
         int n = lector.nextInt ();
         if ( n < 0 ) {
