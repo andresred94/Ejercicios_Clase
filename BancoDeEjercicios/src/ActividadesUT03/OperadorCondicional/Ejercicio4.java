@@ -32,7 +32,6 @@ public class Ejercicio4 {
         } else {
             division = b % a;
         }
-
         return esCierto = division == 0 ? true : false;
 
     }// fin sonDivisores

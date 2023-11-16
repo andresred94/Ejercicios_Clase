@@ -52,6 +52,4 @@ public class Ejercicio5 {
         return n;
     }// fin obtenerEnteropos
 
-
-
 }// fin-class Ejercicio5
