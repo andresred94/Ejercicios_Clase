@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CalcularPrimo {
 
     //atributos
-    static Scanner lector = new Scanner(System.in);
+    private static Scanner lector = new Scanner(System.in);
 
     //-- METODOS PRINCIPALES --//
 
@@ -27,15 +27,12 @@ public class CalcularPrimo {
 
         // mientras que el contador sea menor que el numero ingresado y esPrimo = true
         while ( contador < numUser && esPrimo) {
-
             // comprueba que el resto sea igual a 0
             if (numUser % contador == 0) {
                // si hay más de una division con resto 0 entonces NO es primo
                 esPrimo = false;
             }
-
             contador++;
-
         }
 
         // en caso de que sea TRUE ejecuta lo primero
