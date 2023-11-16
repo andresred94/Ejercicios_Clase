@@ -162,7 +162,7 @@ public class Ejercicio14 {
 
         return esBisiesto;
 
-    }// fin ejecutarPrograma
+    }// fin comprobarBisiesto
 
     // <-- metodos secundarios --> //
     private static int obEntero () {

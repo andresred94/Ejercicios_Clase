@@ -31,11 +31,6 @@ public class AdivinarNumero {
 
     }// fin ejecutarPrograma
 
-
-
-
-
-
     //-- METODOS SECUNDARIOS --//
 
     public static int pedirNumero (){

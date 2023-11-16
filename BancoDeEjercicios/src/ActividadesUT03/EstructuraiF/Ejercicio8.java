@@ -19,14 +19,14 @@ public class Ejercicio8 {
 
     // <-- metodos secundarios --> //
     private static int invertirCifras (int numero){
-        int cifra , nNumero = 0;
+        int cifra , nInvertido = 0;
         while (numero != 0){
             cifra = numero % 10 ;
             numero = numero / 10;
-             nNumero = nNumero * 10 + cifra;
+            nInvertido = nInvertido * 10 + cifra;
         }
 
-        return nNumero;
+        return nInvertido;
     }// fin invertirCifras
 
     private static int obEntero(){

@@ -31,7 +31,7 @@ public class Ejercicio12 {
     private static boolean esFechaCorrecta (int dia, int mes, int anio){
         boolean esCierto = false;
 
-        if (comprobarBisiesto(anio)){
+        if (comprobarBisiesto(anio)){// comprobarBisiesto == true
             // año bisiesto con meses con 30 dias
             if (mes == 4 || mes == 6 || mes == 9 || mes == 11 && dia > 0 && dia <= 30){
                 esCierto = true;
@@ -45,7 +45,7 @@ public class Ejercicio12 {
                 esCierto = true;
             }
 
-        } else { // comprobarBisiesto == false
+        } else {// comprobarBisiesto == false
             // mes febrero
             if (mes == 2 && dia > 0 && dia <= 28){
                 esCierto = true;
@@ -58,6 +58,7 @@ public class Ejercicio12 {
             if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12 && dia > 0 && dia <= 31) {
                 esCierto = true;
             }
+
         }// fin-if comprobarBisiesto
 
         return esCierto;

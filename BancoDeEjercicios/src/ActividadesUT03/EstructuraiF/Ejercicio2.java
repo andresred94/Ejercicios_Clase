@@ -1,4 +1,4 @@
-package ActividadesUT03.EstructuraiF;
+package ActividadesUT03.EstructuraIF;
 
 import java.util.Scanner;
 

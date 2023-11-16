@@ -12,6 +12,12 @@ public class Ejercicio1 {
     public static void ejecutarPrograma(){
         System.out.printf("%nIngresa el dividendo = ");
         int a = pedirEntero();
+        // conttrol errores
+        while (a == -1){
+            System.out.printf("Error : valor no válido");
+            System.out.printf("%nIngresa el dividendo = ");
+            a = pedirEntero();
+        }
         System.out.printf("Ingresa el divisor = ");
         int b = pedirEntero();
         int resultDiv = divisionEntera(a,b);
@@ -33,6 +39,9 @@ public class Ejercicio1 {
     //<-- métodos secundarios -->//
     private static int pedirEntero (){
         int n = lector.nextInt ();
+        if (n < 0){
+            n = -1;
+        }
         return  n;
     }// fin pedirEntero
 
