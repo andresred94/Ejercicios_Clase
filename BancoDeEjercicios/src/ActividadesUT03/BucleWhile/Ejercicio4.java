@@ -7,9 +7,9 @@ public class Ejercicio4 {
     private static Scanner lector = new Scanner(System.in);
 
     public static void menuCalculadora(){
-        int n = 1 , ope1 , ope2;
+        int n  , ope1 , ope2;
         do {
-            System.out.printf("%n1) Sumar%n");
+            System.out.printf("1) Sumar%n");
             System.out.printf("2) Restar%n");
             System.out.printf("3) Dividir%n");
             System.out.printf("4) Multiplicar%n");
@@ -22,13 +22,13 @@ public class Ejercicio4 {
                 ope1 = lector.nextInt();
                 System.out.printf("Ingresa el segundo operador = ");
                 ope2 = lector.nextInt();
-                System.out.printf("La suma de %d y %d es %d" , ope1 , ope2 , ope1 + ope2);
+                System.out.printf("La suma de %d y %d es %.0f%n" , ope1 , ope2 , calculadora(ope1 , n , ope2));
             } else if ( n == 2 ){
                 System.out.printf("Ingresa el primero operador = ");
                 ope1 = lector.nextInt();
                 System.out.printf("Ingresa el segundo operador = ");
                 ope2 = lector.nextInt();
-                System.out.printf("La resta de %d y %d es %d%n " , ope1 , ope2 , Math.abs(ope1 - ope2));
+                System.out.printf("La resta de %d y %d es %.0f%n" , ope1 , ope2 , calculadora(ope1 , n , ope2));
             } else if ( n == 3 ){
                 System.out.printf("Ingresa el primero operador = ");
                 ope1 = lector.nextInt();
@@ -36,14 +36,14 @@ public class Ejercicio4 {
                 ope2 = lector.nextInt();
                 int divisor = Math.min(ope1,ope2);
                 int dividendo = Math.max(ope1,ope2);
-                double result = dividendo / divisor;
-                System.out.printf("La división entre %d y %d es %.1f%n" , dividendo , divisor , result);
+                double result = calculadora(ope1 , n , ope2);
+                System.out.printf("La división entre %d y %d es %.0f%n" , dividendo , divisor , result);
             } else if ( n == 4 ){
                 System.out.printf("Ingresa el primero operador = ");
                 ope1 = lector.nextInt();
                 System.out.printf("Ingresa el segundo operador = ");
                 ope2 = lector.nextInt();
-                System.out.printf("La multiplicación entre %d y %d es %d%n" , ope1 , ope2 , ope1 * ope2);
+                System.out.printf("La multiplicación entre %d y %d es %.0f%n" , ope1 , ope2 , calculadora(ope1 , n , ope2));
             } else if (n == -1) {
                 System.out.printf("Orden desconocida%n");
             }
@@ -52,7 +52,44 @@ public class Ejercicio4 {
     }// fin menuCalculadora
 
     // <-- métodos secundarios --> //
+    private static double calculadora ( double op1 ,int operacion , double op2 ){
+        double result;
 
+        switch ( operacion ){
+            case 1:
+                result = op1 + op2;
+                break;
+            case 2:
+                result = Math.abs ( op1 - op2 );
+                break;
+            case 3:
+                if ( op1 == 0 || op2 == 0 ){
+                    result = 0;
+                } else {
+                    result = (Math.max ( op1 , op2 )) / Math.min ( op1 , op2 );
+                }
+                break;
+            case 4:
+                if ( op1 == 0 || op2 == 0 ){
+                    result = 0;
+                } else {
+                    result = op1 * op2;
+                }
+                break;
+            case 5:
+                if ( op1 == 0 || op2 == 0 ){
+                    result = 0;
+                } else {
+                    result = (Math.max ( op1 , op2 )) % Math.min ( op1 , op2 );
+                }
+                break;
+            default:
+                result = -1;
+                return result;
+        }// fin switch (operacion)
+
+        return result;
+    }// fin calculadora
 
     private static int obtenerEnetero1_5(){
         int n = lector.nextInt();

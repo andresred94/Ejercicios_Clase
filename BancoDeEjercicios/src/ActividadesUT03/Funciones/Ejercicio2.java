@@ -13,7 +13,7 @@ public class Ejercicio2 {
         double imp = pedirDecimal();
         System.out.printf("Ingresa el IVA (entre 0.00 y 1.00) = ");
         double iva = pedirDecimal();
-        double resp = imp + (imp * iva);
+        double resp = imp + (calcularIva(imp,iva));
         System.out.printf("El importe ingresado con el IVA indicado añadido es = %.2f€%n" , resp);
 
     }// fin ejecutarPrograma
