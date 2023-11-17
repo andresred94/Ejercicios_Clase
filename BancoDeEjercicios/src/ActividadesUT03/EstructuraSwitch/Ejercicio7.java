@@ -19,9 +19,6 @@ public class Ejercicio7 {
         double op2In = obtenerDecimalpos ();
         double resultOperacion = calculadora ( op1In , opIng , op2In );
         System.out.printf ( "El resultado de %.1f %c %.1f es igual a %.1f",op1In,opIng,op2In,resultOperacion );
-
-
-
     }// ejecutarPrograma
 
     private static double calculadora ( double op1 ,char operacion , double op2 ){

@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Ejercicio3 {
     //atributos
-    private static Scanner lector = new Scanner(System.in);
+    private static final Scanner lector = new Scanner(System.in);
 
     public static void menuOpciones (){
-        int n = 1;
+        int n;
         do {
             System.out.printf("1) Saludo%n");
             System.out.printf("2) Nombre%n");
