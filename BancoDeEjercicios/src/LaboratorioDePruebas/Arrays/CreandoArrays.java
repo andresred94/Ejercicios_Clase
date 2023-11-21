@@ -1,4 +1,4 @@
-package LaboratorioDePruebas;
+package LaboratorioDePruebas.Arrays;
 
 import java.util.Arrays;
 
@@ -59,8 +59,6 @@ public class CreandoArrays {
             System.out.printf("Elemento en la posición %d : %d%n" , i , arrayAleatorio[i]);
         }
         System.out.printf("La suma de los números aleatorios es : %d " , suma);
-
-
 
 
     }// fin ejecutarPrograma

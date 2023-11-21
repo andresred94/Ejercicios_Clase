@@ -1,5 +1,7 @@
 package LaboratorioDePruebas;
 
+import LaboratorioDePruebas.Arrays.CreandoArrays;
+
 public class ExeClass {
     public static void main(String[] args) {
         //ImprimirVariables.ejecutarPrograma();
