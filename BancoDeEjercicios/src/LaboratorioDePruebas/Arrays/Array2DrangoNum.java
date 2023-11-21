@@ -20,7 +20,7 @@ public class Array2DrangoNum {
         int columnas = obtenerEnteroPositivo ();
         int[][] miArrayBidimensional = new int[filas][columnas];
 
-        // Rellenar el array bidimensional con numeros aleatorios
+        // Rellenar el array bidimensional con un rango de números
         for ( int i = 0 ; i < filas ; i++ ) {
             for ( int j = 0 ; j < columnas ; j++ ) {
                 miArrayBidimensional[i][j] = j + 1;
