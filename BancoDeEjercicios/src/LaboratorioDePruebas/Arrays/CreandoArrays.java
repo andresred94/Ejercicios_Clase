@@ -43,6 +43,7 @@ public class CreandoArrays {
             System.out.printf("%d " , n);
         }
         System.out.println();
+
         // imprimir el contenido del array
         System.out.printf("Arrays.toString(int [] a) = representa en un String el contenido%n");
         // utilizar el metodo toString para representar en un String el contenido
