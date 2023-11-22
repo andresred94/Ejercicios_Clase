@@ -129,7 +129,7 @@ public class Ejercicio05 {
             }
         }
         return false;
-    }
+    }// fin contieneNumero
 
     /**
      * Lee y devuelve un número entero del 1 al 8 ingresado por teclado

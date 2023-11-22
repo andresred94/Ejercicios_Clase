@@ -8,10 +8,10 @@ public class ExeClass {
         //Ejercicio03.ejecutarPrograma ();
         //Ejercicio04.ejecutarPrograma ();
         //Ejercicio05.ejecutarPrograma ();
-        Ejercicio06.ejecutarPrograma ();
-        //Ejercicio07.ejecutarPrograma ();
+        //Ejercicio06.ejecutarPrograma ();
+        //Ejercicio07.ejecutarPrograma ();//ToDo rev
         //Ejercicio08.ejecutarPrograma ();
-        //Ejercicio09.
+        Ejercicio09.ejecutarPrograma ();
     }// fin main
 
 }// fin-class ExeClass

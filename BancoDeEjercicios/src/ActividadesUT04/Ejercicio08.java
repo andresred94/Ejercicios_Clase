@@ -22,6 +22,10 @@ public class Ejercicio08 {
 
     }// fin ejecutarPrograma
 
+    /**
+     * Rellena un array 2D
+     * @param array2D nombre del array que queremos rellenar
+     */
     private static void rellenarArrayBidimensional(int [][] array2D){
         System.out.printf ( "rellenando la matriz...%n" );
         for ( int i = 0 ; i < array2D.length ; i++ ) {
@@ -34,6 +38,11 @@ public class Ejercicio08 {
 
     }// rellenarArrayBidimensional
 
+    /**
+     * Copia el contenido de un array de 2D
+     * @param array2D nombre del array de 2D que queremos copiar
+     * @return resp array de 2D que contiene los valores copiados
+     */
     private static int [][] copiarMatriz ( int[][] array2D ) {
         int filasM = array2D.length;
         int coluM = array2D[0].length;
@@ -51,11 +60,15 @@ public class Ejercicio08 {
 
     }// fin imprimirArrayBidimensional
 
-    private static void imprimirArrayBidimensional ( int[][] array ) {
+    /**
+     * Imprime un array entero de 2D
+     * @param array2D nombre del array que queremos imprimir
+     */
+    private static void imprimirArrayBidimensional ( int[][] array2D ) {
         System.out.printf ( "imprimiendo Array2D...%n" );
         // recorremos el array que se ingresa por parámetro
-        for ( int i = 0 ; i < array.length ; i++ ) {
-            System.out.println ( Arrays.toString ( array[i] ));
+        for ( int i = 0 ; i < array2D.length ; i++ ) {
+            System.out.println ( Arrays.toString ( array2D[i] ));
         }// fin for-i
 
     }// fin imprimirArrayBidimensional

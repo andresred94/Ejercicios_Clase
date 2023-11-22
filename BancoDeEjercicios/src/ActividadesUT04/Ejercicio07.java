@@ -33,7 +33,7 @@ public class Ejercicio07 {
         imprimirArrayBidimensional ( matriz2 );
 
         // control de errores
-        while ( coluM1 != filasM2 ){
+        while ( coluM1 != filasM2 ){// ToDo algo falla aqui...
             System.out.printf ( "%nError : el nº de columnas de la primera matriz debe ser igual al nº de filas de la segunda matriz.%n" );
             System.out.printf ( "Ingresa el nº columnas de la primera matriz = " );
             coluM1 = lector.nextInt ();
@@ -41,6 +41,7 @@ public class Ejercicio07 {
             filasM2 = lector.nextInt ();
         }
 
+        // realiza el calculo
         int [][] resulMulti = productoMatrices ( matriz1 , matriz2 );
         System.out.printf ( "El producto de ambas matrices es:%n" );
         imprimirArrayBidimensional ( resulMulti );
@@ -48,6 +49,12 @@ public class Ejercicio07 {
 
     }// fin ejecutarPrograma
 
+    /**
+     * Multiplica dos arrays bidimensional
+     * @param mA array de 2D
+     * @param mB array de 2D
+     * @return result = { (mA[0][0] * mB[0][0]) + (mA[0][1] * mB[1][0]) + (mA[0][2] * mB[2][0]) }
+     */
     private static int [][] productoMatrices ( int mA [][] , int mB [][]){
         int filMatrA = mA.length;
         int coluMatrA = mA[0].length;
@@ -69,6 +76,10 @@ public class Ejercicio07 {
         return result;
     }// fin sumaMatrices
 
+    /**
+     * Rellena un array 2D
+     * @param array2D nombre del array que queremos rellenar
+     */
     private static void rellenarArrayBidimensional(int [][] array2D){
         for ( int i = 0 ; i < array2D.length ; i++ ) {
             for ( int j = 0 ; j < array2D[i].length ; j++ ) {
@@ -80,14 +91,17 @@ public class Ejercicio07 {
 
     }// rellenarArrayBidimensional
 
-    private static void imprimirArrayBidimensional ( int[][] array ) {
+    /**
+     * Imprime un array entero de 2D
+     * @param array2D nombre del array que queremos imprimir
+     */
+    private static void imprimirArrayBidimensional ( int[][] array2D ) {
         System.out.printf ( "imprimiendo Array2D...%n" );
         // recorremos el array que se ingresa por parámetro
-        for ( int i = 0 ; i < array.length ; i++ ) {
-            System.out.println ( Arrays.toString ( array[i] ));
+        for ( int i = 0 ; i < array2D.length ; i++ ) {
+            System.out.println ( Arrays.toString ( array2D[i] ));
         }// fin for-i
 
     }// fin imprimirArrayBidimensional
-
 
 }// fin-class ejercicio07
