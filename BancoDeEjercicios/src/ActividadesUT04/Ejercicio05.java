@@ -44,20 +44,19 @@ public class Ejercicio05 {
 
 
 
-        // rellena la cantidad de apuestas de X
+        // Coloca -1 en 6 números de cada apuesta
         for ( int i = 0 ; i < numeroApuestas ; i++ ) {
-            for ( int j = 0 ; j < primGen[i].length ; j++ ) {
-                int numEscogido;
-                int [] numsEsco = primitiva ();
-                for ( int k = 0 ; k < numsEsco.length ; k++ ) {
-                    numEscogido = numsEsco[i];
-                    if ( primGen[i][j] == numEscogido ){
-                        primGen[i][j] = 0;
+            int [] numsEsco = primitiva ();// 6 numeros por cada fila
+            for ( int j = 0 ; j < primGen[i].length ; j++ ) {// colum 1 a l 50
+                for ( int k = 0 ; k < numsEsco.length ; k++ ) {// recorre el array generado en primitiva()
+                    // Si coinciden ambos valores cambia a -1
+                    if ( primGen[i][j] == numsEsco[k] ){
+                        primGen[i][j] = -1;
                     }
-                }
 
-            }// for
-        }// for
+                }// for-k
+            }// for-j
+        }// for-i
 
         return primGen;
 
@@ -65,18 +64,25 @@ public class Ejercicio05 {
 
     private static void imprimirArrayBidimensional ( int[][] array ) {
         System.out.printf ( "Resultado apuestas de la primitiva:%n" );
+        // recorremos el array que se ingresa por parámetro
         for ( int i = 0 ; i < array.length ; i++ ) {
             for ( int j = 0 ; j < array[i].length ; j++ ) {
-                System.out.print ( array[i][j] + " " );
-            }
-            System.out.println ();
-        }
-    }
+                // Si encuentra un valor -1 lo cambiar por X
+                if (array[i][j] == -1) {
+                    System.out.print("(X) ");
+                } else {// sino deja el valor intancto
+                    System.out.print(array[i][j] + " ");
+                }
+            }// fin for-j
+            System.out.println ();// salto despues del 50
+        }// fin for-i
+
+    }// fin imprimirArrayBidimensional
 
 
     private static int[] primitiva () {
         int[] primGen = new int[6];
-
+        // Devuelve un array de 6 posiciones con un número aleatorio del 1 al 50
         for ( int i = 0 ; i < primGen.length ; i++ ) {
             int nRan = (int) (Math.random () * 50) + 1;
             primGen[i] = nRan;
@@ -88,10 +94,9 @@ public class Ejercicio05 {
     // <-- métodos secundarios --> //
     private static int obtenerEnteropos1_8 () {
         int n = lector.nextInt ();
-        ;
         if ( n < 1 || n > 8 ) n = -1;
         return n;
-    }// fin obtenerEnteropos
+    }// fin obtenerEnteropos1_8
 
 
 }// fin-class Ejercicio05
