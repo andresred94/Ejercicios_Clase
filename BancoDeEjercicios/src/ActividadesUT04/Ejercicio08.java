@@ -10,7 +10,6 @@ public class Ejercicio08 {
     public static void ejecutarPrograma(){
 
         System.out.printf ( "%nPrograma que copia una matriz...%n" );
-        // primer Array 2D
         System.out.printf ( "Ingresa el nº de filas de la matriz = " );
         int filasM = lector.nextInt ();
         System.out.printf ( "Ingresa el nº columnas de la matriz = " );
