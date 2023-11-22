@@ -15,6 +15,15 @@ public class Ejercicio06 {
         System.out.printf ( "Ingresa el tamaño de las columnas de ambas matrices = " );
         int coluM = lector.nextInt ();
 
+        // control de errores
+        while ( filasM != coluM ){
+            System.out.printf ( "%nError : filas y columnas deben ser iguales.%n" );
+            System.out.printf ( "Ingresa el tamaño de las filas de ambas matrices = " );
+            filasM = lector.nextInt ();
+            System.out.printf ( "Ingresa el tamaño de las columnas de ambas matrices = " );
+            coluM = lector.nextInt ();
+        }
+
         System.out.printf ( "Rellena la primea matriz:%n" );
         int [][] matriz1 = new int[filasM][coluM];
         rellenarArrayBidimensional ( matriz1 );
