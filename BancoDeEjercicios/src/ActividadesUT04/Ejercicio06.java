@@ -8,6 +8,7 @@ public class Ejercicio06 {
     private static Scanner lector = new Scanner ( System.in );
 
     public static void ejecutarPrograma(){
+        // pendiente de controlar errores
 
         System.out.printf ( "%nCalcula la suma de dos matrices%n" );
         System.out.printf ( "Ingresa el tamaño de las filas de ambas matrices = " );
