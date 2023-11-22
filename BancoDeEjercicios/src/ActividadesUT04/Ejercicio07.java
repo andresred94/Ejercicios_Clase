@@ -9,11 +9,11 @@ public class Ejercicio07 {
 
     public static void ejecutarPrograma(){
 
-        System.out.printf ( "%nCalcula la suma de dos matrices%n" );
+        System.out.printf ( "%nCalcula el producto de dos matrices%n" );
         // primer Array 2D
         System.out.printf ( "Ingresa el nº de filas de la primera matriz = " );
         int filasM1 = lector.nextInt ();
-        System.out.printf ( "Ingresa el nº columnas de la primera matriz = " );
+        System.out.printf ( "Ingresa el nº de columnas de la primera matriz = " );
         int coluM1 = lector.nextInt ();
         System.out.printf ( "Rellena la primea matriz:%n" );
         int [][] matriz1 = new int[filasM1][coluM1];
@@ -22,9 +22,9 @@ public class Ejercicio07 {
         imprimirArrayBidimensional ( matriz1 );
 
         // segundo Array 2D
-        System.out.printf ( "Ingresa el nº de filas de la primera matriz = " );
+        System.out.printf ( "Ingresa el nº de filas de la segunda matriz = " );
         int filasM2 = lector.nextInt ();
-        System.out.printf ( "Ingresa el nº columnas de la primera matriz = " );
+        System.out.printf ( "Ingresa el nº de columnas de la segunda matriz = " );
         int coluM2 = lector.nextInt ();
         System.out.printf ( "Rellena la segunda matriz:%n" );
         int [][] matriz2 = new int[filasM2][coluM2];
@@ -60,7 +60,7 @@ public class Ejercicio07 {
                 result[i][j] = 0; // Inicializar la posición a 0 antes de sumar productos
 
                 for (int k = 0; k < coluMatrA; k++) {
-                    result[i][j] = result[i][j] + (mA[i][j] * mB[i][j]);
+                    result[i][j] = result[i][j]+ (mA[i][k] * mB[k][j]);
                     //result[i][j] += mA[i][k] * mB[k][j];
                 }// fin for-k
             }// fin for-j
