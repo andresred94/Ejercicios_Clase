@@ -6,7 +6,7 @@ public class Ejercicio13 {
 
     public static void ejecutarPrograma(){
 
-        System.out.println (filtrarPares ( new int [] {2,3,4,5,6,7,8} ) );
+        filtrarPares ( new int [] {2,3,4,5,6,7,8} );
 
     }
 
@@ -24,33 +24,20 @@ public class Ejercicio13 {
              }
         }
         System.out.printf ( "%n%d %n",contPar );
-        int [] contPares = new int [contPar];
+        int[] contienePares = new int[contPar];
+        int indiceContPares = 0;
 
-
-        for ( int i = 0 ; i < numeros.length ; i++ ) {
-
-            if ( n % 2 == 0 ){
-                for ( int j = 0 ; j < contPares.length ; j++ ) {
-                    contPares[j] = n;
-                }
-                esCierto = true;
-            } else {
-                esCierto = false;
+        // Segundo bucle para almacenar números pares en contPares
+        for (int i = 0; i < numeros.length; i++) {
+            if (numeros[i] % 2 == 0) {
+                contienePares[indiceContPares] = numeros[i];
+                indiceContPares++;
             }
-            if ( esCierto ){
-                n = numeros[i];
-
-            }
-
         }
+        System.out.println ( Arrays.toString ( contienePares ) );
 
+        return contienePares;
 
-
-        //System.out.println ( Arrays.toString ( contPares ) );
-
-        return contPares;
     }// filtrarPares
-
-    //private static int contarTarrays1D ()
 
 }// fin-class Ejercicio13
