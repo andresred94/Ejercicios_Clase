@@ -4,11 +4,11 @@ public class Ejercicio11 {
 
     public static void  ejecutarPrograma(){
 
-        System.out.println (howMuchILoveYou ( 12 ));
+        System.out.println ( meQuiereNoMeQuiere ( 12 ));
 
     }// fin ejecutarPrograma
 
-    private static String howMuchILoveYou(int npetalos) {
+    private static String meQuiereNoMeQuiere ( int npetalos) {
 
         String[] arr ={"Un poco...", "Mucho...",  "Apasionadamente...", "Locamente...", "Nada de nada..."};
 
