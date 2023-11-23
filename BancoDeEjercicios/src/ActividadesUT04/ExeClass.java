@@ -15,7 +15,8 @@ public class ExeClass {
         //Ejercicio10.ejecutarPrograma ();
         //Ejercicio11.ejecutarPrograma ();// ToDo rev
         //Ejercicio12.ejecutarPrograma ();// devuelve 2
-        Ejercicio13.ejecutarPrograma ();
+        //Ejercicio13.ejecutarPrograma ();
+        Ejercicio14.ejecutarPrograma ();
 
 
     }// fin main

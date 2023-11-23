@@ -7,13 +7,13 @@ public class Ejercicio13 {
     public static void ejecutarPrograma(){
 
         filtrarPares ( new int [] {2,3,4,5,6,7,8} );
+        filtrarPares ( new int [] {2,3,3,5,1,7,8} );
 
     }
 
     private static int [] filtrarPares(int [] numeros){
 
         int contPar = 0 , n = 0;
-        boolean esCierto = false;
 
 
         for ( int i = 0 ; i < numeros.length ; i++ ) {
@@ -23,7 +23,8 @@ public class Ejercicio13 {
                  contPar++;
              }
         }
-        System.out.printf ( "%n%d %n",contPar );
+        System.out.println ();
+
         int[] contienePares = new int[contPar];
         int indiceContPares = 0;
 
