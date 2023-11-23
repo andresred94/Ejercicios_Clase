@@ -25,10 +25,17 @@ public class NumeroMayor {
         }
         // ordenamos el array de menor a mayor
         Arrays.sort ( numeros );
+        // el mayor será el que está en el último indice
         float nMayor = numeros[tamArray - 1];
         //float nMayor = numeros[numeros.length-1];
         System.out.printf ( "El número mayor de todos es : %.2f" , nMayor );
-    }
+
+        int [] num = {1,2,3,4,5};
+        actualizaIndice3(num);
+        System.out.println();
+        System.out.println(Arrays.toString(num));
+
+    }// fin mayor
 
     private static float obtenerDecimalPos() {
         float n = lector.nextFloat ();
@@ -45,5 +52,9 @@ public class NumeroMayor {
         }
         return n;
     }// fin obtenerEnteroPos
+
+    private static void actualizaIndice3 (int [] Array1D){
+        Array1D [2] = 5;
+    }
 
 }// fin-class NumeroMayor

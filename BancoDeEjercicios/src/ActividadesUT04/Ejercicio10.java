@@ -26,6 +26,6 @@ public class Ejercicio10 {
             }
         }
         return contOvj;
-    }
+    }// fin contarOveja
 
 }// fin-class Ejercicio10
