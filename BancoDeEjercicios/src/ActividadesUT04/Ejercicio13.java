@@ -12,13 +12,11 @@ public class Ejercicio13 {
     }
 
     private static int [] filtrarPares(int [] numeros){
-
-        int contPar = 0 , n = 0;
-
+        int contPar = 0;
 
         for ( int i = 0 ; i < numeros.length ; i++ ) {
-            n = numeros[i];
-             if ( n % 2 == 0 ){
+
+             if ( numeros[i] % 2 == 0 ){
                  contPar++;
              }
         }
