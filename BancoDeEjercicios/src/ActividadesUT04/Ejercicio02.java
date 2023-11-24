@@ -19,8 +19,12 @@ public class Ejercicio02 {
     }// fin ejecutarPrograma
 
     private static void imprimiArray(int [] numeros){
-        System.out.printf ( "%nEl contenido del Array es:%n" );
-        System.out.println ( Arrays.toString (numeros));
+        System.out.print ( "%nEl contenido del Array es:%n" );
+        //System.out.println ( Arrays.toString (numeros));
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.print(numeros[i]+" ");
+        }
+
     }// fin imprimirArray
 
     private static void rellenarArray(int [] numeros){
@@ -28,14 +32,14 @@ public class Ejercicio02 {
             System.out.printf ( "Ingresa un número = " );
             int nIn = obtenerEnteropos ();
             numeros [i] = nIn;
-            System.out.printf ( "index: %d | pos: %d | value = %d%n" , i , i + 1 , numeros [i] );
+            //System.out.printf ( "index: %d | pos: %d | value = %d%n" , i , i + 1 , numeros [i] );
         }
 
     }// fin rellenarArray
 
     // <-- métodos secundarios --> //
     private static int obtenerEnteropos(){
-        int n = lector.nextInt ();;
+        int n = lector.nextInt ();
         if ( n < 0 ) n = -1;
         return n;
     }// fin obtenerEnteropos

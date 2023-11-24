@@ -18,17 +18,15 @@ public class Ejercicio13 {
 
         for ( int i = 0 ; i < numeros.length ; i++ ) {
             n = numeros[i];
-            System.out.printf ("%d ",n);
              if ( n % 2 == 0 ){
                  contPar++;
              }
         }
-        System.out.println ();
 
         int[] contienePares = new int[contPar];
         int indiceContPares = 0;
 
-        // Segundo bucle para almacenar números pares en contPares
+        // Segundo bucle para almacenar números pares en contienePares
         for (int i = 0; i < numeros.length; i++) {
             if (numeros[i] % 2 == 0) {
                 contienePares[indiceContPares] = numeros[i];
