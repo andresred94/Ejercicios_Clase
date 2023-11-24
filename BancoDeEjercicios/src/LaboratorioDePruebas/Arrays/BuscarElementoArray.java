@@ -6,29 +6,19 @@ public class BuscarElementoArray {
 
     public static void main(String[] args) {
         int [] MiArray = {1,2,2,4,5};
-        int [] posiciones = comprobarPosicion(MiArray,2);
+        System.out.printf ( "Se encuentra la posición: " );
+        System.out.print(comprobarPosicion(MiArray,1));
+    }// fin main
 
-        System.out.print(Arrays.toString(posiciones));
-    }
-
-    private static int [] comprobarPosicion(int [] numeros , int num){
-        int encontrados = 0;
+    private static int comprobarPosicion(int [] numeros , int num){
+        int posEncontrada=0;
         for (int i = 0; i < numeros.length; i++) {
             if (numeros[i] == num){
-                encontrados++;
+                posEncontrada = i + 1;
             }
         }
 
-        int [] cantEncontrados = new int[encontrados];
-        int inCantEnc = 0;
-
-        for (int i = 0; i < numeros.length; i++) {
-            if (numeros[i] == num){
-                cantEncontrados[inCantEnc] = i + 1;
-                inCantEnc++;
-            }
-        }
-        return cantEncontrados;
-    }
+        return posEncontrada;
+    }// fin comprobarPosicion
 
 }// fin-class BuscarElementoArray

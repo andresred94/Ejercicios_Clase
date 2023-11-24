@@ -6,8 +6,9 @@ public class ArrayPosNegCero {
 
     public static void main(String[] args) {
 
-        int [] numeros = {-1,-2,-1,-5,0,0,0,2,1,2};
+        int [] numeros = {-1,-2,0,0,0,2};
         int [] respuesta =  comprobarNumero(numeros);
+        System.out.printf ( "+ | - | 0 %n" );
         System.out.println(Arrays.toString(respuesta));
 
     }// fin main
