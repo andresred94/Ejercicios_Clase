@@ -17,20 +17,24 @@ public class Ejercicio19 {
 
     }// fin ejecutarPrograma
 
+    /**
+     * Función que rellena un array con enteros sin repetir
+     * @param numeros Array a rellenar.
+     */
     private static void rellenarArraySinRepetir(int [] numeros){
         int nIn;
         for ( int i = 0 ; i < numeros.length ; i++ ) {
             System.out.printf ( "Ingresa un número = " );
             nIn = obtenerEneroPos ();
             numeros[i] = nIn;
-            boolean esCierto = estaDentroDe ( numeros , nIn , i );
+            boolean esCierto = estaDentroDe1D ( numeros , nIn , i );
             if ( esCierto ){
                 System.out.printf("Error : Valor repetido.%n");
                 i--;
             }
-        }
+        }// fin for
 
-
+        System.out.printf ( "Contenido del array:%n" );
         System.out.println (Arrays.toString ( numeros ));
 
     }// fin rellenarArraySinRepetir
@@ -48,14 +52,14 @@ public class Ejercicio19 {
      * @param indFin Tamaño del indice del array que se ingresa
      * @return true = si se encuentra dentro del Array
      */
-    private static boolean estaDentroDe(int[] numeros, int num, int indFin){
+    private static boolean estaDentroDe1D ( int[] numeros, int num, int indFin){
         for (int i = 0; i < indFin; i++) {
             if (numeros[i] == num) {
                 return true;
             }
         }
         return false;
-    }// fin estaDentroDe
+    }// fin estaDentroDe1D
 
 
 
