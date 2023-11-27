@@ -25,7 +25,7 @@ public class ExeClass {
         //Ejercicio20.ejecutarPrograma ();
         //Ejercicio21.ejecutarPrograma ();
         //Ejercicio22.ejecutarPrograma ();// Todo rev
-        Ejercicio23.ejecutarPrograma ();
+        Ejercicio23.ejecutarPrograma ();//
 
     }// fin main
 
