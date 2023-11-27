@@ -54,7 +54,7 @@ public class Ejercicio23 {
         int [][] decPremiados = new int[encontrados][2];
         int fila = 0;
 
-        // almacena cada número premiado con la posiciçon que ha ganado
+        // almacena cada número premiado con la posiciçon del número ganador
         for ( int i = 0 ; i < premios.length ; i++ ) {
             for ( int j = 0 ; j < decComprados.length ; j++ ) {
                 if ( premios[i][1] == decComprados[j][1] ){
@@ -65,56 +65,21 @@ public class Ejercicio23 {
             }
         }
 
-
         System.out.printf ( "Decimos premiados:%n" );
+
         for ( int i = 0 ; i < decPremiados.length ; i++ ) {
-            System.out.println ( Arrays.toString ( decPremiados[i] ) );
-        }
-        /*
-            if ( decComprados[i][1] == decPremiados[i][1] ){
-                    posicion = decPremiados[i][0];
-                    numPrem = decPremiados[i][1];
-                }
-
-            if ( posicion == 1 ){
-                System.out.printf ( "Tu decimo (%d) ha sido premiado con El Gordo con 400.000 €%n" , numPrem );
-            } else if ( posicion == 2 ) {
-                System.out.printf ( "Tu decimo (%d) ha sido premiado con el 2do premio de 125.000 €%n" , numPrem );
-            } else if ( posicion == 3 ) {
-                System.out.printf ( "Tu decimo (%d) ha sido premiado con el 3er premio de 50.000 €%n" , numPrem );
-            } else if ( posicion == 4) {
-                System.out.printf ( "Tu decimo (%d) ha sido premiado con el 4to premio de 20.000 €%n" , numPrem );
+            if ( decPremiados[i][0] == 1 ){
+                System.out.printf ( "Tu decimo (%d) ha sido premiado con El Gordo con 400.000 €%n" , decPremiados[i][1] );
+            } else if ( decPremiados[i][0] == 2 ) {
+                System.out.printf ( "Tu decimo (%d) ha sido premiado con el 2do premio de 125.000 €%n" , decPremiados[i][1] );
+            } else if ( decPremiados[i][0] == 3 ) {
+                System.out.printf ( "Tu decimo (%d) ha sido premiado con el 3er premio de 50.000 €%n" , decPremiados[i][1] );
+            } else if ( decPremiados[i][0] == 4) {
+                System.out.printf ( "Tu decimo (%d) ha sido premiado con el 4to premio de 20.000 €%n" , decPremiados[i][1] );
             } else  {
-                System.out.printf ( "Tu decimo (%d) ha sido premiado con el 5to premio de 6.000 €%n" , numPrem );
-            }*/
-
-
-
-        /*if ( decComprados[i][1] == premios[i][1] ) {
-                posicion = i + 1;
-                numPrem = premios[i][1];
-                switch ( posicion ) {
-                    case 1:
-                        System.out.printf ( "Tu decimo (%d) ha sido premiado con El Gordo con 400.000 €%n" , numPrem );
-                        break;
-                    case 2:
-                        System.out.printf ( "Tu decimo (%d) ha sido premiado con el 2do premio de 125.000 €%n" , numPrem );
-                        break;
-                    case 3:
-                        System.out.printf ( "Tu decimo (%d) ha sido premiado con el 3er premio de 50.000 €%n" , numPrem );
-                        break;
-                    case 4:
-                        System.out.printf ( "Tu decimo (%d) ha sido premiado con el 4to premio de 20.000 €%n" , numPrem );
-                        break;
-                    case 5:
-                        System.out.printf ( "Tu decimo (%d) ha sido premiado con el 5to premio de 6.000 €%n" , numPrem );
-                        break;
-                    default:
-                        System.out.printf ( "Ninguno de los decimos apostados ha sido premiado.%n" );
-                        break;
-                }
-            }*/
-
+                System.out.printf ( "Tu decimo (%d) ha sido premiado con el 5to premio de 6.000 €%n" , decPremiados[i][1] );
+            }
+        }
 
     }// comprobarSorteoNavidad
 
