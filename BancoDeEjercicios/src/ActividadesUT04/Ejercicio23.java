@@ -5,16 +5,16 @@ import java.util.Scanner;
 
 public class Ejercicio23 {
 
-    private static Scanner lector = new Scanner ( System.in );
+    private static Scanner lector = new Scanner(System.in);
 
 
-    public static void ejecutarPrograma () {
+    public static void ejecutarPrograma() {
 
-        int[][] numPremiados = loterialNavidad ();
+        int[][] numPremiados = loterialNavidad();
 
         // haciendo trampas... para comprobar el funcionamiento
-        for ( int i = 0 ; i < numPremiados.length ; i++ ) {
-            System.out.println (Arrays.toString ( numPremiados[i] ));
+        for (int i = 0; i < numPremiados.length; i++) {
+            System.out.println(Arrays.toString(numPremiados[i]));
         }
 
         /*
@@ -29,34 +29,35 @@ public class Ejercicio23 {
             decComprados[i][0] = i + 1;
             decComprados[i][1] = nIn;
         }*/
-        System.out.printf ( "¿Cuantos décimos has comprado? = " );
-        int cantDecimos = lector.nextInt ();
-        int [] misDecimos = new int[cantDecimos];
-        for ( int i = 0 ; i < misDecimos.length ; i++ ) {
-            System.out.printf ( "Ingresa un décimo = " );
-            int nIn = lector.nextInt ();
+        System.out.printf("¿Cuantos décimos has comprado? = ");
+        int cantDecimos = lector.nextInt();
+        int[] misDecimos = new int[cantDecimos];
+        for (int i = 0; i < misDecimos.length; i++) {
+            System.out.printf("Ingresa un décimo = ");
+            int nIn = lector.nextInt();
             misDecimos[i] = nIn;
         }
 
-        comprobarSorteoNavidad ( numPremiados , misDecimos );
+        comprobarSorteoNavidad(numPremiados, misDecimos);
 
     }// ejecutarPrograma
 
     /**
      * Función que comprueba los números ingresados en en un array de 1D con los de un array de 2D
      * Dependiendo de la posiscion de la fila en la que se encuentra, genera un resultado distinto.
+     *
      * @param premios Array 2D la primera columna indica el premio y la segunda el numero ganador
      * @param decimos Los números que el usuario ha escogido y que se van a comprobar
      */
-    private static void comprobarSorteoNavidad ( int[][] premios , int[] decimos ) {
+    private static void comprobarSorteoNavidad(int[][] premios, int[] decimos) {
 
-        System.out.printf ( "Decimos ganadores:%n" );
-        for ( int i = 0 ; i < premios.length ; i++ ) {
-            System.out.println ( Arrays.toString ( premios[i] ) );
+        System.out.printf("Decimos ganadores:%n");
+        for (int i = 0; i < premios.length; i++) {
+            System.out.println(Arrays.toString(premios[i]));
         }
 
-        System.out.printf ( "Decimos comprados:%n" );
-        System.out.println (Arrays.toString ( decimos ));
+        System.out.printf("Decimos comprados:%n");
+        System.out.println(Arrays.toString(decimos));
 
         int encontrados = 0;
 
@@ -70,21 +71,21 @@ public class Ejercicio23 {
             }
         }*/
 
-        for ( int i = 0 ; i < premios.length ; i++ ) {
-            for ( int j = 0 ; j < decimos.length ; j++ ) {
-                if ( decimos[j] == premios[i][1] ){
+        for (int i = 0; i < premios.length; i++) {
+            for (int j = 0; j < decimos.length; j++) {
+                if (decimos[j] == premios[i][1]) {
                     encontrados++;
                 }
             }
         }
 
-        int [][] decPremiados = new int[encontrados][2];
+        int[][] decPremiados = new int[encontrados][2];
         int fila = 0;
 
         // almacena cada número premiado con la posicicion que ocupa en el array de premios
-        for ( int i = 0 ; i < premios.length ; i++ ) {
-            for ( int j = 0 ; j < decimos.length ; j++ ) {
-                if ( premios[i][1] == decimos[j] ){
+        for (int i = 0; i < premios.length; i++) {
+            for (int j = 0; j < decimos.length; j++) {
+                if (premios[i][1] == decimos[j]) {
                     decPremiados[fila][0] = premios[i][0];
                     decPremiados[fila][1] = premios[i][1];
                     fila++;
@@ -92,34 +93,40 @@ public class Ejercicio23 {
             }
         }
 
-        System.out.printf ( "Decimos premiados:%n" );
+        System.out.printf("Decimos premiados:%n");
         // comprueba el valor de la primera fila del array 2D
-        for ( int i = 0 ; i < decPremiados.length ; i++ ) {
-            if ( decPremiados[i][0] == 1 ){
-                System.out.printf ( "Tu decimo (%d) ha sido premiado con El Gordo con 400.000 €%n" , decPremiados[i][1] );
-            } else if ( decPremiados[i][0] == 2 ) {
-                System.out.printf ( "Tu decimo (%d) ha sido premiado con el 2do premio de 125.000 €%n" , decPremiados[i][1] );
-            } else if ( decPremiados[i][0] == 3 ) {
-                System.out.printf ( "Tu decimo (%d) ha sido premiado con el 3er premio de 50.000 €%n" , decPremiados[i][1] );
-            } else if ( decPremiados[i][0] == 4 ) {
-                System.out.printf ( "Tu decimo (%d) ha sido premiado con el 4to premio de 20.000 €%n" , decPremiados[i][1] );
-            } else if ( decPremiados[i][0] == 5 ){
-                System.out.printf ( "Tu decimo (%d) ha sido premiado con el 5to premio de 6.000 €%n" , decPremiados[i][1] );
+        for (int i = 0; i < decPremiados.length; i++) {
+            if (decPremiados[i][0] == 1) {
+                System.out.printf("Tu decimo (%d) ha sido premiado con El Gordo con 400.000 €%n", decPremiados[i][1]);
+            } else if (decPremiados[i][0] == 2) {
+                System.out.printf("Tu decimo (%d) ha sido premiado con el 2do premio de 125.000 €%n", decPremiados[i][1]);
+            } else if (decPremiados[i][0] == 3) {
+                System.out.printf("Tu decimo (%d) ha sido premiado con el 3er premio de 50.000 €%n", decPremiados[i][1]);
+            } else if (decPremiados[i][0] == 4) {
+                System.out.printf("Tu decimo (%d) ha sido premiado con el 4to premio de 20.000 €%n", decPremiados[i][1]);
+            } else if (decPremiados[i][0] == 5) {
+                System.out.printf("Tu decimo (%d) ha sido premiado con el 5to premio de 6.000 €%n", decPremiados[i][1]);
             } else {
                 System.out.printf("Ningun decimo comprado ha sido premiado.%n");
             }
         }
 
-        for (int i = 0; i < premios.length; i++) {
-            fila = 0;
-            if ( (decimos[fila] == premios[0][1] + 1)  || (decimos[fila] == premios[0][1] - 1) ){
-                System.out.printf("Tu decimo %d ha sido premiado con 2000 €.%n" , decimos[fila]);
-            } else if ( (decimos[fila] == premios[1][1] + 1)  || (decimos[fila] == premios[1][1] - 1) ) {
-                System.out.printf("Tu decimo %d ha sido premiado con 1250 €.%n" , decimos[fila]);
-            }else if ( (decimos[fila] == premios[2][1] + 1)  || (decimos[fila] == premios[2][1] - 1) ) {
-                System.out.printf("Tu decimo %d ha sido premiado con 960 €.%n" , decimos[fila]);
+        fila = 0;
+
+        for (int i = 0; i < decimos.length; i++) {
+            if ((decimos[fila] == premios[0][1] + 1) || (decimos[fila] == premios[0][1] - 1)) {
+                System.out.printf("Tu decimo %d ha sido premiado con 2000 €.%n", decimos[fila]);
+                fila++;
+            } else if ((decimos[fila] == premios[1][1] + 1) || (decimos[fila] == premios[1][1] - 1)) {
+                System.out.printf("Tu decimo %d ha sido premiado con 1250 €.%n", decimos[fila]);
+                fila++;
+            } else if ((decimos[fila] == premios[2][1] + 1) || (decimos[fila] == premios[2][1] - 1)) {
+                System.out.printf("Tu decimo %d ha sido premiado con 960 €.%n", decimos[fila]);
+                fila++;
             }
+
         }
+
 
 
         /*
@@ -136,15 +143,15 @@ public class Ejercicio23 {
      *
      * @return int [][] array que contiene 5 filas con los números premiados
      */
-    private static int[][] loterialNavidad () {
+    private static int[][] loterialNavidad() {
         int[] numAlea = new int[1807];
 
         // genera un número aleatorio que no se repite
-        for ( int i = 0 ; i < numAlea.length ; i++ ) {
-            int nRan = (int) (Math.random () * 99999 + 1);
+        for (int i = 0; i < numAlea.length; i++) {
+            int nRan = (int) (Math.random() * 99999 + 1);
             numAlea[i] = nRan;
-            while ( contieneNumero ( numAlea , nRan ) ) {
-                nRan = (int) (Math.random () * 99999 + 1);
+            while (contieneNumero(numAlea, nRan)) {
+                nRan = (int) (Math.random() * 99999 + 1);
             }
         }// fin for
 
@@ -153,7 +160,7 @@ public class Ejercicio23 {
         int numPremiados = 5;
 
         // rellena el array 2D con los números premiados
-        for ( int i = 0 ; i < numPremiados ; i++ ) {
+        for (int i = 0; i < numPremiados; i++) {
             premiados[i][0] = i + 1;// prmio 1 , premio 2 ... hasta 5 filas
             premiados[i][1] = numAlea[i];
         }
@@ -163,13 +170,14 @@ public class Ejercicio23 {
 
     /**
      * Función que comprueba que un número está dentro de un array 1D
+     *
      * @param array1D array donde se buscará el número
      * @param numero  número que se va a buscar
      * @return true si se encuentra el número
      */
-    private static boolean contieneNumero ( int[] array1D , int numero ) {
-        for ( int i = 0 ; i < array1D.length ; i++ ) {
-            if ( array1D[i] == numero ) {
+    private static boolean contieneNumero(int[] array1D, int numero) {
+        for (int i = 0; i < array1D.length; i++) {
+            if (array1D[i] == numero) {
                 return true;
             }
         }
