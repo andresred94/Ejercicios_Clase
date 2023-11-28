@@ -101,12 +101,32 @@ public class Ejercicio23 {
                 System.out.printf ( "Tu decimo (%d) ha sido premiado con el 2do premio de 125.000 €%n" , decPremiados[i][1] );
             } else if ( decPremiados[i][0] == 3 ) {
                 System.out.printf ( "Tu decimo (%d) ha sido premiado con el 3er premio de 50.000 €%n" , decPremiados[i][1] );
-            } else if ( decPremiados[i][0] == 4) {
+            } else if ( decPremiados[i][0] == 4 ) {
                 System.out.printf ( "Tu decimo (%d) ha sido premiado con el 4to premio de 20.000 €%n" , decPremiados[i][1] );
-            } else  {
+            } else if ( decPremiados[i][0] == 5 ){
                 System.out.printf ( "Tu decimo (%d) ha sido premiado con el 5to premio de 6.000 €%n" , decPremiados[i][1] );
+            } else {
+                System.out.printf("Ningun decimo comprado ha sido premiado.%n");
             }
         }
+
+        for (int i = 0; i < premios.length; i++) {
+            fila = 0;
+            if ( (decimos[fila] == premios[0][1] + 1)  || (decimos[fila] == premios[0][1] - 1) ){
+                System.out.printf("Tu decimo %d ha sido premiado con 2000 €.%n" , decimos[fila]);
+            } else if ( (decimos[fila] == premios[1][1] + 1)  || (decimos[fila] == premios[1][1] - 1) ) {
+                System.out.printf("Tu decimo %d ha sido premiado con 1250 €.%n" , decimos[fila]);
+            }else if ( (decimos[fila] == premios[2][1] + 1)  || (decimos[fila] == premios[2][1] - 1) ) {
+                System.out.printf("Tu decimo %d ha sido premiado con 960 €.%n" , decimos[fila]);
+            }
+        }
+
+
+        /*
+        if ( (decimos[j] == decPremiados[i][1] + 1)  || (decimos[j] == decPremiados[i][1] - 1)  ){
+                    System.out.printf("Tu decimo %d ha sido premiado con 2000 €.%n" , decimos[j]);
+                } */
+
 
     }// comprobarSorteoNavidad
 
@@ -143,7 +163,6 @@ public class Ejercicio23 {
 
     /**
      * Función que comprueba que un número está dentro de un array 1D
-     *
      * @param array1D array donde se buscará el número
      * @param numero  número que se va a buscar
      * @return true si se encuentra el número
