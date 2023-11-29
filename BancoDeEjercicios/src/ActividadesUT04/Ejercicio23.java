@@ -96,6 +96,7 @@ public class Ejercicio23 {
             }
         }
 
+
         System.out.printf("Decimos premiados:%n");
         // comprueba el valor de la primera columna del array decPremiados
         for (int i = 0; i < decPremiados.length; i++) {
@@ -109,8 +110,6 @@ public class Ejercicio23 {
                 System.out.printf("Tu decimo (%d) ha sido premiado con el 4to premio de 20.000 €%n", decPremiados[i][1]);
             } else if (decPremiados[i][0] == 5) {
                 System.out.printf("Tu decimo (%d) ha sido premiado con el 5to premio de 6.000 €%n", decPremiados[i][1]);
-            } else {
-                System.out.printf("Ningun decimo comprado ha sido premiado.%n");
             }
         }
 
@@ -118,21 +117,19 @@ public class Ejercicio23 {
 
         // comprueba si es en número anterior o posterior a los 3 primeros premios
         for (int i = 0; i < decimos.length; i++) {
-            if ((decimos[fila] == premios[0][1] + 1) || (decimos[fila] == premios[0][1] - 1)) {
+            if ( (decimos[fila] == (premios[0][1] + 1) ) || (decimos[fila] == (premios[0][1] - 1) )) {
                 System.out.printf("Tu decimo %d ha sido premiado con 2000 €.%n", decimos[fila]);
                 fila++;
-            } else if ((decimos[fila] == premios[1][1] + 1) || (decimos[fila] == premios[1][1] - 1)) {
+            } else if ( (decimos[fila] == (premios[1][1] + 1) ) || (decimos[fila] == (premios[1][1] - 1) ) ) {
                 System.out.printf("Tu decimo %d ha sido premiado con 1250 €.%n", decimos[fila]);
                 fila++;
-            } else if ((decimos[fila] == premios[2][1] + 1) || (decimos[fila] == premios[2][1] - 1)) {
+            } else if ( (decimos[fila] == (premios[2][1] + 1) ) || (decimos[fila] == (premios[2][1] - 1)) ) {
                 System.out.printf("Tu decimo %d ha sido premiado con 960 €.%n", decimos[fila]);
                 fila++;
             }
         }
 
-
-
-        for ( int i = 0 ; i < 3 ; i++ ) {
+/*        for ( int i = 0 ; i < 3 ; i++ ) {
             int prem1 = premios[0][1];
             int prem2 = premios[1][1];
             int prem3 = premios[2][1];
@@ -148,8 +145,7 @@ public class Ejercicio23 {
                 numeroRedondeado = (cociente + 1) * 100;
             }
             System.out.printf ( "%d %n" , numeroRedondeado );
-        }
-
+        }*/
 
     }// comprobarSorteoNavidad
 

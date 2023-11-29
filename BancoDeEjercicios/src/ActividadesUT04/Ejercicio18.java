@@ -8,12 +8,21 @@ public class Ejercicio18 {
         imprimirArraySinRepetir ( new int[]  {4,4,4,111,2,2,4,2,2,3,111,4,5} );
 
     }// ejecutarPrograma
-
-    /** -- SIN UTILIZAR LA FUNCIÓN estaDentroDe();
+/*
+    *//** -- SIN UTILIZAR LA FUNCIÓN estaDentroDe();
      * Función que imprimie un array sin los números repetidos
      * @param numeros array que se va a imprimir
-     */
-    /*private static void imprimirArraySinRepetir(int [] numeros){
+     *//*
+    private static void imprimirArraySinRepetir(int [] numeros){
+        // Otra posible solución
+        Arrays.sort(numeros);
+        for (int i = 0; i < numeros.length; i++) {
+            if (i == 0){
+                System.out.printf("%d " , numeros[i]);
+            } else if (numeros[i] != numeros[i - 1]) {
+                System.out.printf("%d " , numeros[i]);
+            }
+        }
         int cantRepe = 0;
         boolean estaRepetido = false;
         for (int i = 0; i < numeros.length; i++) {
@@ -26,7 +35,6 @@ public class Ejercicio18 {
         for (int i = 0; i < numeros.length; i++) {
             if (numeros[i] == (numeros[i] + 1)) {
                 cantRepe++;
-                i--;
             }
         }
         System.out.printf("%d " ,cantRepe);
@@ -42,21 +50,35 @@ public class Ejercicio18 {
                 indArr++;
             }
         }
-
-        System.out.println (Arrays.toString ( nuevoArray ));
+        //System.out.println (Arrays.toString ( numeros ));
 
     }// fin-class imprimirArraySinRepetir*/
 
     private static void imprimirArraySinRepetir(int [] numeros){
-        /*// Otra posible solución
-        Arrays.sort(numeros);
+        // Otra posible solución
+        // Arrays.sort(numeros);
+        System.out.printf ( "%d " , numeros.length );
+        // como ordenar el contenido de un array usando bucles for
+        for (int i = 0; i < numeros.length - 1; i++) {
+            for (int j = 0; j < numeros.length - 1 - i; j++) {
+                // Comparar elementos adyacentes y intercambiar si están en el orden incorrecto
+                if (numeros[j] > numeros[j + 1]) {
+                    int temp = numeros[j];
+                    numeros[j] = numeros[j + 1];
+                    numeros[j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.print (Arrays.toString ( numeros ));
+
         for (int i = 0; i < numeros.length; i++) {
             if (i == 0){
                 System.out.printf("%d " , numeros[i]);
             } else if (numeros[i] != numeros[i - 1]) {
                 System.out.printf("%d " , numeros[i]);
             }
-        }*/
+        }
 
         int cantRepe = 0;
         // cuenta los números repetidos
@@ -89,7 +111,8 @@ public class Ejercicio18 {
      * @param num Número entero que se va a buscar
      * @param indFin Tamaño del indice del array que se ingresa
      * @return true = si se encuentra dentro del Array
-     */
+     * */
+
     private static boolean estaDentroDe (int[] numeros, int num, int indFin){
         for (int i = 0; i < indFin; i++) {
             if (numeros[i] == num) {
