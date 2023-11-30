@@ -20,10 +20,10 @@ public class ExeClass {
         //Ejercicio15.ejecutarPrograma ();// ToDo rev
         //Ejercicio16.ejecutarPrograma ();// ToDo rev
         //Ejercicio17.ejecutarPrograma ();
-        Ejercicio18.ejecutarPrograma ();
+        //Ejercicio18.ejecutarPrograma ();
         //Ejercicio19.ejecutarPrograma ();
         //Ejercicio20.ejecutarPrograma ();
-        //Ejercicio21.ejecutarPrograma ();
+        Ejercicio21.ejecutarPrograma ();
         //Ejercicio22.ejecutarPrograma ();// Todo rev
         //Ejercicio23.ejecutarPrograma ();
 
