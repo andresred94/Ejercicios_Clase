@@ -17,7 +17,7 @@ public class Ejercicio23 {
             System.out.println(Arrays.toString(numPremiados[i]));
         }
 
-        /*
+        /*//Rellenar un array de 2D con números
         System.out.printf ( "¿Cuantos décimos has comprado? = " );
         int cantDecimos = lector.nextInt ();
 
@@ -29,6 +29,7 @@ public class Ejercicio23 {
             decComprados[i][0] = i + 1;
             decComprados[i][1] = nIn;
         }*/
+
         System.out.printf("¿Cuantos décimos has comprado? = ");
         int cantDecimos = lector.nextInt();
         int[] misDecimos = new int[cantDecimos];
@@ -61,7 +62,7 @@ public class Ejercicio23 {
 
         int encontrados = 0;
 
-        // Cuenta las veces que un decimo tiene premio
+        // Cuenta las veces que un decimo tiene premio en un Array 2D
         /*
         for ( int i = 0 ; i < premios.length ; i++ ) {
             for ( int j = 0 ; j < decComprados.length ; j++ ) {
@@ -71,6 +72,7 @@ public class Ejercicio23 {
             }
         }*/
 
+        // Cuenta las veces que un decimo tiene premio
         for (int i = 0; i < premios.length; i++) {
             for (int j = 0; j < decimos.length; j++) {
                 if (decimos[j] == premios[i][1]) {
@@ -79,6 +81,7 @@ public class Ejercicio23 {
             }
         }
 
+        // crea un Array de 2D con la cantidad de números premiados
         int[][] decPremiados = new int[encontrados][2];
         int fila = 0;
 
@@ -93,8 +96,9 @@ public class Ejercicio23 {
             }
         }
 
+
         System.out.printf("Decimos premiados:%n");
-        // comprueba el valor de la primera fila del array 2D
+        // comprueba el valor de la primera columna del array decPremiados
         for (int i = 0; i < decPremiados.length; i++) {
             if (decPremiados[i][0] == 1) {
                 System.out.printf("Tu decimo (%d) ha sido premiado con El Gordo con 400.000 €%n", decPremiados[i][1]);
@@ -106,41 +110,48 @@ public class Ejercicio23 {
                 System.out.printf("Tu decimo (%d) ha sido premiado con el 4to premio de 20.000 €%n", decPremiados[i][1]);
             } else if (decPremiados[i][0] == 5) {
                 System.out.printf("Tu decimo (%d) ha sido premiado con el 5to premio de 6.000 €%n", decPremiados[i][1]);
-            } else {
-                System.out.printf("Ningun decimo comprado ha sido premiado.%n");
             }
         }
 
         fila = 0;
 
+        // comprueba si es en número anterior o posterior a los 3 primeros premios
         for (int i = 0; i < decimos.length; i++) {
-            if ((decimos[fila] == premios[0][1] + 1) || (decimos[fila] == premios[0][1] - 1)) {
+            if ( (decimos[fila] == (premios[0][1] + 1) ) || (decimos[fila] == (premios[0][1] - 1) )) {
                 System.out.printf("Tu decimo %d ha sido premiado con 2000 €.%n", decimos[fila]);
                 fila++;
-            } else if ((decimos[fila] == premios[1][1] + 1) || (decimos[fila] == premios[1][1] - 1)) {
+            } else if ( (decimos[fila] == (premios[1][1] + 1) ) || (decimos[fila] == (premios[1][1] - 1) ) ) {
                 System.out.printf("Tu decimo %d ha sido premiado con 1250 €.%n", decimos[fila]);
                 fila++;
-            } else if ((decimos[fila] == premios[2][1] + 1) || (decimos[fila] == premios[2][1] - 1)) {
+            } else if ( (decimos[fila] == (premios[2][1] + 1) ) || (decimos[fila] == (premios[2][1] - 1)) ) {
                 System.out.printf("Tu decimo %d ha sido premiado con 960 €.%n", decimos[fila]);
                 fila++;
             }
-
         }
 
+/*        for ( int i = 0 ; i < 3 ; i++ ) {
+            int prem1 = premios[0][1];
+            int prem2 = premios[1][1];
+            int prem3 = premios[2][1];
 
+            int cociente = premios[i][1] / 100;
+            int residuo = premios[i][1] % 100;
 
-        /*
-        if ( (decimos[j] == decPremiados[i][1] + 1)  || (decimos[j] == decPremiados[i][1] - 1)  ){
-                    System.out.printf("Tu decimo %d ha sido premiado con 2000 €.%n" , decimos[j]);
-                } */
-
+            // Redondear hacia abajo o hacia arriba según el residuo
+            int numeroRedondeado;
+            if (residuo < 50) {
+                numeroRedondeado = cociente * 100;
+            } else {
+                numeroRedondeado = (cociente + 1) * 100;
+            }
+            System.out.printf ( "%d %n" , numeroRedondeado );
+        }*/
 
     }// comprobarSorteoNavidad
 
     /**
      * Función que genera 1807 números aleatorios del 00000 al 99999 que no se repiten
-     * y devuelve en un array 2D los 5 primeros números
-     *
+     * y devuelve en un array 2D los 5 primeros números.
      * @return int [][] array que contiene 5 filas con los números premiados
      */
     private static int[][] loterialNavidad() {

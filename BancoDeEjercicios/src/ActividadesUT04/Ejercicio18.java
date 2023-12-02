@@ -9,48 +9,26 @@ public class Ejercicio18 {
 
     }// ejecutarPrograma
 
-    /** -- SIN UTILIZAR LA FUNCIÓN estaDentroDe();
-     * Función que imprimie un array sin los números repetidos
-     * @param numeros array que se va a imprimir
-     */
-    /*private static void imprimirArraySinRepetir(int [] numeros){
-        int cantRepe = 0;
-        boolean estaRepetido = false;
-        for (int i = 0; i < numeros.length; i++) {
-            if (numeros[i] == (numeros[i] + 1)) {
-                estaRepetido = true;
-            }
-        }
-
-        // cuenta los números repetidos
-        for (int i = 0; i < numeros.length; i++) {
-            if (numeros[i] == (numeros[i] + 1)) {
-                cantRepe++;
-                i--;
-            }
-        }
-        System.out.printf("%d " ,cantRepe);
-        // crea un array del tamañado de el total menos los repetidos
-        int[] nuevoArray = new int[numeros.length - cantRepe];
-        int indArr = 0;
-
-        // comprueba que numeros[i] está dentro de nuevoArray , indArr = Indice en el que busca el número
-        for (int i = 0; i < numeros.length; i++) {
-
-            if (!estaRepetido) {
-                nuevoArray[indArr] = numeros[i];
-                indArr++;
-            }
-        }
-
-        System.out.println (Arrays.toString ( nuevoArray ));
-
-    }// fin-class imprimirArraySinRepetir*/
 
     private static void imprimirArraySinRepetir(int [] numeros){
-        /*// Otra posible solución
-        Arrays.sort(numeros);
-        for (int i = 0; i < numeros.length; i++) {
+        // Otra posible solución
+        // Arrays.sort(numeros);
+        // como ordenar el contenido de un array usando bucles for
+        /*for (int i = 0; i < numeros.length - 1; i++) {
+            for (int j = 0; j < numeros.length - 1 - i; j++) {
+                // Comparar elementos adyacentes y intercambiar si están en el orden incorrecto
+                if (numeros[j] > numeros[j + 1]) {
+                    int temp = numeros[j];
+                    numeros[j] = numeros[j + 1];
+                    numeros[j + 1] = temp;
+                }
+            }
+        }*/
+
+        System.out.print (Arrays.toString ( numeros ));
+
+        // imprime solo los números que nose repiten
+        /*for (int i = 0; i < numeros.length; i++) {
             if (i == 0){
                 System.out.printf("%d " , numeros[i]);
             } else if (numeros[i] != numeros[i - 1]) {
@@ -58,30 +36,60 @@ public class Ejercicio18 {
             }
         }*/
 
-        int cantRepe = 0;
-        // cuenta los números repetidos
+        // cuenta los números que están repetidos
+        int cantSinRepe = 0;
         for (int i = 0; i < numeros.length; i++) {
-            if (estaDentroDe(numeros, numeros[i], i)) {
-                cantRepe++;
+            // Verificar si el número ya está en el nuevo array
+            boolean repetido = false;
+            // comprueba si numeros i == numeros i - 1
+            for (int j = 0; j < i; j++) {
+                if (numeros[i] == numeros[j]) {
+                    repetido = true;
+                    break;
+                }
+            }
+
+            // Cuenta cada vez que no está repetido. Si está repetido lo cuenta solo 1 vez.
+            if (!repetido) {
+                cantSinRepe++;
             }
         }
 
-        // crea un array del tamañado de el total menos los repetidos
-        int[] nuevoArray = new int[numeros.length - cantRepe];
+        // crea un array con los números sin repetirse
+        int[] nuevoArray = new int[cantSinRepe];
+
         int indArr = 0;
 
-        // comprueba que numeros[i] está dentro de nuevoArray , indArr = Indice en el que busca el número
+        // Recorre las 13 posiciones de numeros.
         for (int i = 0; i < numeros.length; i++) {
+            // Verificar nuevamente si el número ya está en el nuevo array
+            boolean repetido = false;
+            // Recorre nuevoArray y comprueba si ya está dentro de nuevoArray[j] el número numeros[i]
+            for (int j = 0; j < indArr; j++) {
+                // Si ya estaba dentro estonces está repetido
+                if (numeros[i] == nuevoArray[j]) {
+                    repetido = true;
+                }
+            }
 
-            if (!estaDentroDe(nuevoArray, numeros[i] , indArr)) {
+            // Si no está repetido, agregarlo al nuevo array
+            if (!repetido) {
                 nuevoArray[indArr] = numeros[i];
                 indArr++;
             }
         }
 
+        /*for (int i = 0; i < numeros.length; i++) {
+
+            if (!estaDentroDe(nuevoArray, numeros[i] , indArr)) {
+                nuevoArray[indArr] = numeros[i];
+                indArr++;
+            }
+        }*/
+
         System.out.println (Arrays.toString ( nuevoArray ));
 
-    }// fin-class imprimirArraySinRepetir
+    }// fin imprimirArraySinRepetir
 
     /**
      * Función que comprueba que num está dentro del numeros.
@@ -89,7 +97,8 @@ public class Ejercicio18 {
      * @param num Número entero que se va a buscar
      * @param indFin Tamaño del indice del array que se ingresa
      * @return true = si se encuentra dentro del Array
-     */
+     * */
+/*
     private static boolean estaDentroDe (int[] numeros, int num, int indFin){
         for (int i = 0; i < indFin; i++) {
             if (numeros[i] == num) {
@@ -97,6 +106,6 @@ public class Ejercicio18 {
             }
         }
         return false;
-    }// fin estaDentroDe
+    }// fin estaDentroDe*/
 
 }// fin-class Ejercicio18

@@ -7,31 +7,37 @@ public class Ejercicio04 {
     public static void ejecutarPrograma(){
         int [] primGenerada = primitiva ();
         imprimiArray ( primGenerada );
+
+
     }// fin ejecutarPrograma
 
     /**
      * Devuelve un array de 6 números aleatorio del 1 al 50 que no se repiten
      * @return array entero con 5 indices
      */
-    private static int[] primitiva () {
+    protected static int[] primitiva () {
+        // Crear el array
         int[] primGen = new int[6];
-        for ( int i = 0 ; i < primGen.length ; i++ ) {
-            // genera un número aleatorio del 1 al 50 incluido
-            int nRan = (int) (Math.random () * 50) + 1;
 
-            // Verificar si nRan ya está en posiciones anteriores
-            while ( contieneNumero ( primGen , nRan ) ) {
-                nRan = (int) (Math.random () * 50) + 1;
-            }
+        // recorremos el array
+        for ( int i = 0 ; i < primGen.length ; i++ ) {
+            int nRan = (int) (Math.random () * 49) + 1;
             primGen[i] = nRan;
-        }
-        // otra manera de imprimir un array
-        // System.out.println ( Arrays.toString ( primGen ) );
+            // volvemos a recorrer todas las posiciones hasta la penultima posicion = i - 1
+            for ( int j = 0 ; j < i ; j++ ) {
+                if ( primGen[i] == primGen[j] ){
+                    nRan= (int) (Math.random () * 49) + 1;
+                    primGen[i] = nRan;
+                }
+            }// fin for-j
+        }// fin for-i
+
         return primGen;
 
     }// fin primitiva
 
-    /**Función que comprueba que un número es igual a otro número dentro del array
+    /**
+     * Función que comprueba que un número es igual a otro número dentro del array
      * @param array1D - array que queremos comprobar
      * @param numero - número entero que queremos que compruebe que está dentro de array1D
      * @return true si ambos son iguales
@@ -44,6 +50,17 @@ public class Ejercicio04 {
         }
         return false;
     }// fin contieneNumero
+
+    private static boolean numerosDistintos ( int [] array ){
+        for ( int i = 0 ; i < array.length ; i++ ) {
+            for ( int j = 0 ; j < i ; j++ ) {
+                if ( array[i] == array[j] ){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }// numerosDistintos
 
     /**
      * Función que imprime un array 1D

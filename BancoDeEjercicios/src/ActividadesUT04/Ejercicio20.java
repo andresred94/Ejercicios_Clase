@@ -10,11 +10,22 @@ public class Ejercicio20 {
 
         int[][] matriz = {
                 {1, 2, 3, 4},
+                {13, 0, 6, 9},
+                {45, 1, 4, 1},
                 {5, 6, 4, 8},
                 {9, 10, 11, 12}
         };
-        int num = 4;
+        int num = 20;
         int cantVeces = aparicionesNumero ( matriz, num);
+
+        // mensaje en singular y plural
+        if ( cantVeces > 1 ) {
+            System.out.printf ( "El número %d ha sido encontrado %d veces%n", num , cantVeces );
+        } else if ( cantVeces == 1) {
+            System.out.printf ( "El número %d ha sido encontrado %d vez%n", num , cantVeces );
+        } else {
+            System.out.printf ( "El número %d no ha sido encontrado ni una vez.%n", num );
+        }// fin if
 
 
     }// ejecutarPrograma
@@ -35,13 +46,6 @@ public class Ejercicio20 {
                 }
             }
         }
-        // mensaje en singular y plural
-        if ( vecesRepetido > 1 ) {
-            System.out.printf ( "El número %d ha sido encontrado %d veces%n", numero , vecesRepetido );
-        } else if ( vecesRepetido == 1) {
-            System.out.printf ( "El número %d ha sido encontrado %d vez%n", numero , vecesRepetido );
-        }// fin if
-
         return vecesRepetido;
 
     }// fin aparicionesNumero

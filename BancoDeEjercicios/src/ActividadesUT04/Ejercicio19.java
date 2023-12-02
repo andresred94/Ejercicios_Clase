@@ -11,7 +11,7 @@ public class Ejercicio19 {
     public static void ejecutarPrograma(){
         int tamArray = 6;
         int [] seisNumeros = new int[tamArray];
-        System.out.printf ( "Ingresa %d números para rellenar el array.%n" , tamArray );
+        System.out.printf ( "Ingresa %d números para rellenar el array de 1D.%n" , tamArray );
         rellenarArraySinRepetir ( seisNumeros );
 
 
@@ -23,7 +23,22 @@ public class Ejercicio19 {
      */
     private static void rellenarArraySinRepetir(int [] numeros){
         int nIn;
+
         for ( int i = 0 ; i < numeros.length ; i++ ) {
+            System.out.printf ( "Ingresa un número = " );
+            nIn = obtenerEneroPos ();
+            numeros[i] = nIn;
+            for (int j = 0; j < i; j++) {
+                while (numeros[i] == numeros[j]) {
+                    System.out.printf ( "Error : número repetido. Ingresa un número = " );
+                    nIn = obtenerEneroPos ();
+                    numeros[i] = nIn;
+                }
+            }
+        }// fin for
+
+        // otra manera de hacerlo llamando a la función estaDentroDe1D();
+        /*for ( int i = 0 ; i < numeros.length ; i++ ) {
             System.out.printf ( "Ingresa un número = " );
             nIn = obtenerEneroPos ();
             numeros[i] = nIn;
@@ -32,12 +47,27 @@ public class Ejercicio19 {
                 System.out.printf("Error : Valor repetido.%n");
                 i--;
             }
-        }// fin for
+        }*/// fin for
 
         System.out.printf ( "Contenido del array:%n" );
         System.out.println (Arrays.toString ( numeros ));
 
     }// fin rellenarArraySinRepetir
+
+    /* Función que comprueba que num está dentro del numeros.
+     * @param numeros Array que se va a recorrer para comprobarlo
+     * @param num Número entero que se va a buscar
+     * @param indFin Tamaño del indice del array que se ingresa
+     * @return true = si se encuentra dentro del Array
+     */
+    /*private static boolean estaDentroDe1D ( int[] numeros, int num, int indFin){
+        for (int i = 0; i < indFin; i++) {
+            if (numeros[i] == num) {
+                return true;
+            }
+        }
+        return false;
+    }*/// fin estaDentroDe1D
 
     private static int obtenerEneroPos(){
         int n = lector.nextInt ();
@@ -52,14 +82,14 @@ public class Ejercicio19 {
      * @param indFin Tamaño del indice del array que se ingresa
      * @return true = si se encuentra dentro del Array
      */
-    private static boolean estaDentroDe1D ( int[] numeros, int num, int indFin){
+    /*private static boolean estaDentroDe1D ( int[] numeros, int num, int indFin){
         for (int i = 0; i < indFin; i++) {
             if (numeros[i] == num) {
                 return true;
             }
         }
         return false;
-    }// fin estaDentroDe1D
+    }// fin estaDentroDe1D*/
 
 
 
