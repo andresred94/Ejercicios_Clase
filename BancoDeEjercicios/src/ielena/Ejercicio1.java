@@ -29,6 +29,10 @@ public class Ejercicio1 {
                     System.out.printf("Ingresa la cantidad de entradas que has comprado = ");
                     int cantEntradas = lector.nextInt();
                     int precioT = calculaPrecio(cantEntradas);
+                    while ( precioT == -1 ){
+                        System.out.printf ( "Error : la cantidad de personas no coincide con el número de entradas compradas.%n" );
+                        precioT = calculaPrecio(cantEntradas);
+                    }
                     System.out.printf("El precio total de las entradas es: %d €.%n" , precioT);
                     break;
                 default:
@@ -53,9 +57,9 @@ public class Ejercicio1 {
         double precioMayores = 10.0;
         int precioTotal = 0;
         int totalPersonas = 0;
-        int persMayores65 = 0;
-        int persMayoresDeEdad = 0;
-        int persDoce = 0;
+        int persMayores65;
+        int persMayoresDeEdad;
+        int persDoce;
         if ( totalPersonas < numEntradas ){
             System.out.printf("¿Cuantas personas son mayores de 65? = ");
             persMayores65 = lector.nextInt();
@@ -67,7 +71,7 @@ public class Ejercicio1 {
             precioTotal = (int) ((persMayoresDeEdad * precioGeneral) + (persMayores65 * precioMayores) + (persDoce * precioDoce));
         }
 
-        while ( totalPersonas > numEntradas || totalPersonas < numEntradas ){
+        /*while ( totalPersonas > numEntradas || totalPersonas < numEntradas ){
             System.out.printf ( "Error : la cantidad de personas no coincide con el número de entradas compradas.%n" );
             System.out.printf("¿Cuantas personas son mayores de 65? = ");
             persMayores65 = lector.nextInt();
@@ -76,6 +80,9 @@ public class Ejercicio1 {
             System.out.printf("¿Cuantas personas son menores de 12 años = ");
             persDoce = lector.nextInt();
             totalPersonas = persDoce + persMayores65 + persMayoresDeEdad;
+        }*/
+        if ( totalPersonas > numEntradas || totalPersonas < numEntradas ){
+            precioTotal = -1;
         }
         return precioTotal;
     }// calculaPrecio
