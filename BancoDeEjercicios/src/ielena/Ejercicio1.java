@@ -67,8 +67,8 @@ public class Ejercicio1 {
             precioTotal = (int) ((persMayoresDeEdad * precioGeneral) + (persMayores65 * precioMayores) + (persDoce * precioDoce));
         }
 
-        while ( totalPersonas > numEntradas ){
-            System.out.printf ( "Error : hay más personas que entradas compradas.%n" );
+        while ( totalPersonas > numEntradas || totalPersonas < numEntradas ){
+            System.out.printf ( "Error : la cantidad de personas no coincide con el número de entradas compradas.%n" );
             System.out.printf("¿Cuantas personas son mayores de 65? = ");
             persMayores65 = lector.nextInt();
             System.out.printf("¿Cuantas personas son mayores de 18? = ");
