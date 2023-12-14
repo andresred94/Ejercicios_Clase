@@ -38,9 +38,9 @@ public class Ejercicio1 {
                 default:
                     System.out.printf("Fin del programa.");
 
-            }
+            }// fin-switch
         } while (n == 1 || n == 2);
-    }
+    }// fin main
 
     public static int calculaSegundos(int horas, int minutos , int segundos){
 
@@ -81,6 +81,7 @@ public class Ejercicio1 {
             persDoce = lector.nextInt();
             totalPersonas = persDoce + persMayores65 + persMayoresDeEdad;
         }*/
+
         if ( totalPersonas > numEntradas || totalPersonas < numEntradas ){
             precioTotal = -1;
         }
