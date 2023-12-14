@@ -24,16 +24,18 @@ public class Ejercicio4 {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
                 int numeroAleatorio;
+                // Genera un número aleatorio entre 0 y 9 mientras que el indice no este marcado como true
                 do {
-                    // Generar un número aleatorio entre 0 y 9
                     numeroAleatorio = azar ();
                 } while (numerosGenerados[numeroAleatorio]);
 
                 // Almacenar el número en la matriz y marcar como generado
                 matriz[i][j] = numeroAleatorio;
                 numerosGenerados[numeroAleatorio] = true;
-            }
-        }
+                // No se almacenan repetidos porque al marcarse como false, no se almacenará en la matriz
+
+            }// for-j
+        }// for-i
 
         return matriz;
     }
