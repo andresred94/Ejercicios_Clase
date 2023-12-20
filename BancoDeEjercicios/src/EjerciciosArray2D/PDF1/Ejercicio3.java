@@ -1,4 +1,4 @@
-package EjerciciosArray2D.PDFuno;
+package EjerciciosArray2D.PDF1;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,10 +1,13 @@
-package EjerciciosArray2D.PDFuno;
+package EjerciciosArray2D.PDF1;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Ejercicio1 {
 
     public static void main ( String[] args ) {
+
+
         int [][] matriz1 = {
                 {10,20},
                 {30,40}

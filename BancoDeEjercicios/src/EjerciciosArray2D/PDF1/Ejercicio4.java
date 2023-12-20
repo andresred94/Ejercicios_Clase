@@ -1,4 +1,4 @@
-package EjerciciosArray2D.PDFuno;
+package EjerciciosArray2D.PDF1;
 
 import java.util.Arrays;
 
@@ -19,7 +19,6 @@ public class Ejercicio4 {
 
         // Array para llevar un registro de los números generados
         boolean[] numerosGenerados = new boolean[10];
-
         // Rellenar la matriz
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
