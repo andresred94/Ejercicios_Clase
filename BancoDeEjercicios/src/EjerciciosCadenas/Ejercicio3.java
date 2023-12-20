@@ -15,7 +15,7 @@ public class Ejercicio3 {
             }
         }
 
-        System.out.printf ( "El caracter %c se repite %d veces." , letra , cont  );
+        System.out.printf ( "El caracter \"%c\" se repite %d veces." , letra , cont  );
 
     }// fin main
     
