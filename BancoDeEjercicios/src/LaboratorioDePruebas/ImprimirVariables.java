@@ -64,6 +64,7 @@ public class ImprimirVariables {
         System.out.print("int = " + a + ", float = " + b + ", double = " + c + ", String = " + mensaje + ", boolean = " + mentira);
 
 
+
     }// fin-ejecutarPrograma
 
 }// fin-ImprimirVariables

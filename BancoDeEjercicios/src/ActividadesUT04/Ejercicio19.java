@@ -60,7 +60,7 @@ public class Ejercicio19 {
      * @param indFin Tamaño del indice del array que se ingresa
      * @return true = si se encuentra dentro del Array
      */
-    /*private static boolean estaDentroDe1D ( int[] numeros, int num, int indFin){
+     /*private static boolean estaDentroDe1D ( int[] numeros, int num, int indFin){
         for (int i = 0; i < indFin; i++) {
             if (numeros[i] == num) {
                 return true;

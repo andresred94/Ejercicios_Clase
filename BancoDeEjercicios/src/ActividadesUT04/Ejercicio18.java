@@ -1,16 +1,34 @@
 package ActividadesUT04;
 
 import java.util.Arrays;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Ejercicio18 {
 
     public static void ejecutarPrograma(){
         imprimirArraySinRepetir ( new int[]  {4,4,4,111,2,2,4,2,2,3,111,4,5} );
+        //imprimirArraySinRepetirv2 ( new int[]  {4,4,4,111,2,2,4,2,2,3,111,4,5} );
+        //System.out.println (ThreadLocalRandom.current ().nextInt (1,10));
 
     }// ejecutarPrograma
 
+    /*private static void imprimirArraySinRepetirv2(int [] numeros) {
+        boolean repetido=false;
+        for (int i=0;i<numeros.length;i++) {
+            for (int j=0;j<i;j++) {
+                if (numeros[i]==numeros[j]) {
+                    repetido=true;
+                }
+            }
+            if (!repetido) {
+                System.out.print(numeros[i]+"  ");
+            }
+            repetido=false;
+        }
+    }*/
 
     private static void imprimirArraySinRepetir(int [] numeros){
+
         // Otra posible solución
         // Arrays.sort(numeros);
         // como ordenar el contenido de un array usando bucles for
@@ -25,7 +43,7 @@ public class Ejercicio18 {
             }
         }*/
 
-        System.out.print (Arrays.toString ( numeros ));
+        //System.out.print (Arrays.toString ( numeros ));
 
         // imprime solo los números que nose repiten
         /*for (int i = 0; i < numeros.length; i++) {
@@ -45,7 +63,6 @@ public class Ejercicio18 {
             for (int j = 0; j < i; j++) {
                 if (numeros[i] == numeros[j]) {
                     repetido = true;
-                    break;
                 }
             }
 
@@ -53,7 +70,7 @@ public class Ejercicio18 {
             if (!repetido) {
                 cantSinRepe++;
             }
-        }
+        }// fin-fori
 
         // crea un array con los números sin repetirse
         int[] nuevoArray = new int[cantSinRepe];

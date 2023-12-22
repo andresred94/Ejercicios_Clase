@@ -18,13 +18,13 @@ public class Ejercicio05 {
         }
 
         int[][] apuesta1 = generarPrimitiva ( cantApu );
-        for ( int i = 0 ; i < apuesta1.length ; i++ ) {
+        /*for ( int i = 0 ; i < apuesta1.length ; i++ ) {
             System.out.printf ( "Apuesta %d = " , i + 1);
             for ( int j = 0 ; j < apuesta1[i].length ; j++ ) {
                 System.out.printf ( "%d " , apuesta1[i][j] );
             }
             System.out.println ();
-        }
+        }*/
 
         //imprimirArrayBidimensional ( apuesta1 );
 
@@ -60,14 +60,13 @@ public class Ejercicio05 {
                     // Si coincide con el valor aleatorio generado en la primitiva
                     // con el número de columna, el valor cambia a -1
                     if ( primGen[i][j] == numsEsco[k] ) {
-                        primGen[i][j] = 'X';
+                        primGen[i][j] = -1;
                     }
 
                 }// for-k
             }// for-j
         }// for-i
 
-        /*
         for ( int i = 0 ; i < primGen.length ; i++ ) {
             System.out.printf ( "Apuesta %d = " , i + 1);
             for ( int j = 0 ; j < primGen[i].length ; j++ ) {
@@ -78,7 +77,7 @@ public class Ejercicio05 {
                 }
             }
             System.out.println ();
-        }*/
+        }
 
         return primGen;
 

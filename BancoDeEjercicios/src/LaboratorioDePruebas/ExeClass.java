@@ -18,7 +18,9 @@ public class ExeClass {
         //MayorEdad.ejecutarPrograma();
         //ContarCifras.ejecutarPrograma ();
         //MenuFunciones.ejecutarMenu();
-        CreandoArrays.ejecutarPrograma ();
+        //CreandoArrays.ejecutarPrograma ();
+        EsCapicua.ejecutarPrograma ();
+
 
 
     }// fin main

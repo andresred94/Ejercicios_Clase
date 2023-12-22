@@ -4,7 +4,7 @@ public class Ejercicio11 {
 
     public static void  ejecutarPrograma(){
 
-        System.out.println ( meQuiereNoMeQuiere ( 12 ));
+        System.out.println ( meQuiereNoMeQuiere ( 55 ));
 
     }// fin ejecutarPrograma
 
@@ -18,6 +18,11 @@ public class Ejercicio11 {
     private static String meQuiereNoMeQuiere ( int npetalos) {
 
         String[] arr ={"Un poco...", "Mucho...",  "Apasionadamente...", "Locamente...", "Nada de nada..."};
+        int n = 1;
+        switch ( n ){
+            case 1:
+                n++;
+        }
 
         return arr[npetalos % 5];
     }// fin meQuiereNoMeQuiere

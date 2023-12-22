@@ -37,14 +37,14 @@ public class Ejercicio15 {
         boolean esCierto;
 
         int restoAnios = anioActual - anio;
-        int restoMeses = Math.abs ( mesActual - mes );
-        int restoDias = Math.abs ( diaActual - dia );
+        int restoMeses = mesActual - mes;
+        int restoDias = diaActual - dia ;
 
         // Verificar si la persona ha cumplido 18 años o está a punto de cumplirlos
         if (restoAnios > 18 || (restoAnios == 18 && (mesActual > mes || (mesActual == mes && diaActual >= dia)))) {
             esCierto = true;
         } else {
-            //System.out.printf ( "Te quedan  %d dia(s), %d mese(s) y %d año(s) para ser mayor de edad" , restoDias , restoMeses , restoAnios);
+            System.out.printf ( "Te quedan  %d dia(s), %d mese(s) y %d año(s) para ser mayor de edad" , restoDias , restoMeses , restoAnios);
             esCierto = false;
         }
         return esCierto;

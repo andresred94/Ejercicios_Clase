@@ -6,13 +6,23 @@ public class Ejercicio14 {
 
     public static void ejecutarPrograma () {
         System.out.println (Arrays.toString ( ordenar ( new int[] {5,4,3,1,6,8} ) ));
-        System.out.println (Arrays.toString ( ordenarDes ( new int[] {5,4,3,1,6,8} ) ));
+        //System.out.println (Arrays.toString ( ordenarDes ( new int[] {5,4,3,1,6,8} ) ));
 
     }// fin ejecutarPrograma
 
 
     private static int [] ordenar(int [] numeros){
-        Arrays.sort ( numeros );
+        for (int i = 0; i < numeros.length - 1; i++) {
+            for (int j = 0; j < numeros.length - 1 - i; j++) {
+                // Comparar elementos adyacentes y intercambiar si están en el orden incorrecto
+                if (numeros[j] < numeros[j + 1]) {
+                    int temp = numeros[j];
+                    numeros[j] = numeros[j + 1];
+                    numeros[j + 1] = temp;
+                }
+            }
+        }
+
         return numeros;
     }// fin ordenar
 

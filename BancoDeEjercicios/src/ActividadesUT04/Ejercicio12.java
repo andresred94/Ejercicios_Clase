@@ -3,7 +3,7 @@ package ActividadesUT04;
 public class Ejercicio12 {
 
     public static void ejecutarPrograma(){
-        int [] notasAlu = {2,2,2,2,2};
+        int [] notasAlu = {1,2,3,4,5};
         int mediaAlu = obtenerMedia(notasAlu);
 
         System.out.printf("La nota media del alumno es : %d" , mediaAlu);
@@ -11,13 +11,13 @@ public class Ejercicio12 {
     }// fin ejecutarPrograma
 
     private static int obtenerMedia(int [] array1D){
+        int suma = 0;
         int media = 0;
         for (int i = 0; i < array1D.length ; i++) {
-            media = media + array1D[i];
+            suma = suma + array1D[i];
         }
-        media = media / array1D.length;
 
-        Math.floor(media);
+        Math.floor(media = suma / array1D.length);
 
         return media;
     }// fin obtenerMedia

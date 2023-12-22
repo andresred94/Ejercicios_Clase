@@ -8,6 +8,11 @@ public class Ejercicio7 {
     // atributos
     protected static Scanner lector = new Scanner(System.in);
 
+    public static void main ( String[] args ) {
+
+        ejecutarPrograma ();
+
+    }
     // <-- Metodos pricipales -->
     public static void ejecutarPrograma () {
         double km1 , km2 , pago1 , pago2 , pCombu1 , pCombu2 , totalLitros , tDistancia , tCoste;
