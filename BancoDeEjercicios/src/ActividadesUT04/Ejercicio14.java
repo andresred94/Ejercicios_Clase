@@ -5,14 +5,14 @@ import java.util.Arrays;
 public class Ejercicio14 {
 
     public static void ejecutarPrograma () {
-        System.out.println (Arrays.toString ( ordenar ( new int[] {5,4,3,1,6,8} ) ));
-        //System.out.println (Arrays.toString ( ordenarDes ( new int[] {5,4,3,1,6,8} ) ));
+        //System.out.println (Arrays.toString ( ordenar ( new int[] {5,2,3,1,6,4} ) ));
+        System.out.println (Arrays.toString ( ordenarDes ( new int[] {5,4,3,1,6,2} ) ));
 
     }// fin ejecutarPrograma
 
 
     private static int [] ordenar(int [] numeros){
-        for (int i = 0; i < numeros.length - 1; i++) {
+        /*for (int i = 0; i < numeros.length - 1; i++) {
             for (int j = 0; j < numeros.length - 1 - i; j++) {
                 // Comparar elementos adyacentes y intercambiar si están en el orden incorrecto
                 if (numeros[j] < numeros[j + 1]) {
@@ -21,8 +21,8 @@ public class Ejercicio14 {
                     numeros[j + 1] = temp;
                 }
             }
-        }
-
+        }*/
+        Arrays.sort ( numeros );// por defecto se ordenan en orden ascendente
         return numeros;
     }// fin ordenar
 
@@ -40,11 +40,11 @@ public class Ejercicio14 {
             intercambiado = false;
 
             for (int i = 0; i < tamArray - 1; i++) {
-                // si el indice n es menor  que n - 1
+                // si el indice n es menor  que n + 1 (el siguiente)
                 if (arrayOrdenado[i] < arrayOrdenado[i + 1]) {
                     // almacena en temp el menor valor
                     int temp = arrayOrdenado[i];
-                    // almacena el valor mayor (n+1) en el indice n
+                    // almacena el valor mayor en el indice n
                     arrayOrdenado[i] = arrayOrdenado[i + 1];
                     // en el segundo indice se almacena el menor número
                     arrayOrdenado[i + 1] = temp;

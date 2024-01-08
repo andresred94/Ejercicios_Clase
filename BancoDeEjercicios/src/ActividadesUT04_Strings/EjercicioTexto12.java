@@ -1,32 +1,40 @@
 package ActividadesUT04_Strings;
 
-import java.util.Arrays;
-
 public class EjercicioTexto12 {
 
     public static void main ( String[] args ) {
 
-        String [] palabras = {"uno","dos","tresa"};
+        String [] palabras = {"un","doh","treh","nueve","cuatro"};
         System.out.println (palabraMasLarga ( palabras ));
 
     }// fin main
 
     private static String palabraMasLarga(String [] palabras){
+        int tamArray = palabras.length;
+        boolean intercambiado;
 
-        for (int i = 0; i < palabras.length - 1; i++) {
-            for (int j = 0; j < palabras.length - 1 - i; j++) {
-                // Comparar elementos adyacentes y intercambiar si están en el orden incorrecto
-                if (palabras[i].length () <  palabras[j + 1].length ()) {
-                    String temp = palabras[j];
-                    palabras[j] = palabras[j + 1];
-                    palabras[j + 1] = temp;
+        do {// antes de entrar al loop se establece a false porque damos por hecho
+            // que los indices están desordenados
+            intercambiado = false;
+
+            // Recorre todos los indices del array y termina en el penúltimo
+            for (int i = 0; i < tamArray - 1; i++) {
+                // si la cantidad de letras de i es menor  que i + 1 (la siguiente)
+                if (palabras[i].length () < palabras[i + 1].length ()) {
+                    // almacena en temps la palabra más pequeña
+                    String temps = palabras[i];
+                    // almacena la palabra más larga en el indice i
+                    palabras[i] = palabras[i + 1];
+                    // en el siguiente indice se almacena el menor número
+                    palabras[i + 1] = temps;
+                    // si no están intercambiadas TODAS de mayor a menor no sale del bucle while
+                    intercambiado = true;
                 }
-            }
-        }
+            }// Después de cada iteración, el elemento más grande estará en su posición correcta
 
-        for ( int i = 0 ; i < palabras.length ; i++ ) {
-            System.out.printf ("%s " , palabras[i]);
-        }
+            // tamArray-- para que compruebe los siguientes números hasta que intercambiado sea false
+            tamArray--;
+        } while (intercambiado);
 
         return palabras[0];
     }//fin palabraMasLarga
