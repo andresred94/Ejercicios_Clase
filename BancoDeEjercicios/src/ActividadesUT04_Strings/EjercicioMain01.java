@@ -5,6 +5,7 @@ public class EjercicioMain01 {
     public static void main ( String[] args ) {
         // Verifica si se han pasado parámetros
         if (args.length > 0) {
+            //System.out.println ("Parametros recibidos:");
             System.out.printf("Parámetros recibidos:%n");
 
             // Imprime cada parámetro

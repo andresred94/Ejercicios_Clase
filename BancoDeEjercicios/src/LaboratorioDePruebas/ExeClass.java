@@ -4,7 +4,7 @@ import LaboratorioDePruebas.Arrays.CreandoArrays;
 
 public class ExeClass {
     public static void main(String[] args) {
-        //ImprimirVariables.ejecutarPrograma();
+        ImprimirVariables.ejecutarPrograma();
         //ComoUsarScanner.ejecutarPrograma();
         //MostrarEdad.ejecutarPrograma();
         //CalcularEdad.ejecutarPrograma();
@@ -19,7 +19,7 @@ public class ExeClass {
         //ContarCifras.ejecutarPrograma ();
         //MenuFunciones.ejecutarMenu();
         //CreandoArrays.ejecutarPrograma ();
-        EsCapicua.ejecutarPrograma ();
+        //EsCapicua.ejecutarPrograma ();
 
 
 
