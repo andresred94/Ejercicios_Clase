@@ -7,7 +7,7 @@ public class EjercicioTexto13 {
     public static void main ( String[] args ) {
         System.out.printf ( "Bienvenido a la App para gestionar tareas%n" );
         menu ();
-
+        lector.close();
     }// fin main
 
     private static void menu (){
