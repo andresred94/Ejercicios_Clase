@@ -12,14 +12,15 @@ public class EjercicioTexto12 {
     }// fin main
 
     private static String palabraMasLarga(String [] palabras){
-        int tamArray = palabras.length;
-        boolean intercambiado;
-
         Arrays.sort(palabras);
         for (int i = 0; i < palabras.length; i++) {
             System.out.println(palabras[i]);
         }
-        /*do {// antes de entrar al loop se establece a false porque damos por hecho
+        /*
+        int tamArray = palabras.length;
+        boolean intercambiado;
+
+        do {// antes de entrar al loop se establece a false porque damos por hecho
             // que los indices están desordenados
             intercambiado = false;
 
@@ -41,7 +42,6 @@ public class EjercicioTexto12 {
             // tamArray-- para que compruebe los siguientes números hasta que intercambiado sea false
             tamArray--;
         } while (intercambiado);*/
-
         return palabras[(palabras.length)-1];
     }//fin palabraMasLarga
 

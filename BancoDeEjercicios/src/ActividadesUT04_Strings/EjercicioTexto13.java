@@ -3,7 +3,7 @@ package ActividadesUT04_Strings;
 import java.util.Scanner;
 
 public class EjercicioTexto13 {
-    private static Scanner lector = new Scanner ( System.in );
+    private final static Scanner lector = new Scanner ( System.in );
     public static void main ( String[] args ) {
         System.out.printf ( "Bienvenido a la App para gestionar tareas%n" );
         menu ();
@@ -16,13 +16,7 @@ public class EjercicioTexto13 {
             listaDetareas[i] = " ";
         }
         int cont = 0;
-        int opEscg = 1;
-        // control de errores
-        while ( opEscg == -1 ){
-            System.out.printf ( "Error : opción no válida. Vuelve a ingresar una opción = " );
-            opEscg = obtenerRango1_5 ();
-        }
-
+        int opEscg;
         do {
             System.out.printf ( "Menú:%n" );
             System.out.printf ( "1.-Introducir tarea.%n" );
@@ -31,8 +25,13 @@ public class EjercicioTexto13 {
             System.out.printf ( "4.-Eliminar todas las tareas.%n" );
             System.out.printf ( "5.-Salir.%n" );
             System.out.printf ( "Escoge una de las opciones = " );
-            opEscg = obtenerRango1_5 ();
-            lector.nextLine();
+            opEscg = lector.nextInt ();// solo lee los entero pero no lee la tecla "enter"
+            lector.nextLine();// cosume el caracter "enter"
+            // control de errores
+            while ( opEscg < 1 ){
+                System.out.printf ( "Error : opción no válida. Vuelve a ingresar una opción = " );
+                opEscg = lector.nextInt ();
+            }
 
             if (opEscg == 1){
                 System.out.printf ( "Introduce el nombre de la tarea = " );
@@ -70,28 +69,34 @@ public class EjercicioTexto13 {
     }// fin elimitarTarea
 
     private static void listarTareas (String [] list){
+        System.out.printf ("Listado de tareas:%n");
+        boolean esCierto = false;
         for ( int i = 0 ; i < list.length ; i++ ) {
-            System.out.printf ( "tarea nº%d: %s%n" , i + 1 , list[i] );
+            if ( !(list[i] == " ") ){
+                System.out.printf ( "tarea nº%d: %s%n" , i + 1 , list[i] );
+            }
+            for ( int j = 0 ; j < list.length ; j++ ) {
+                if ( list[0].length () == 1 && list[j].length () == 1){
+                    esCierto = true;
+                }
+            }
         }
+
+        if ( esCierto ){
+            System.out.printf ( "No hay tareas que mostrar.%n" );
+        }
+
     }// fin listarTareas
 
     private static void introducirTarea (String [] list , String tar, int indc){
 
         for (int i = 0; i < list.length; i++) {
-            if (tar == list[i]){
+            if (tar.equals(list[i])) {
                 System.out.println("La tarea está repetida");
-            } else {
-                list[indc] = tar;
+                return; // Salir del método si la tarea ya existe
             }
         }
+        list[indc] = tar;
     }// fin introducirTarea
-
-    private static int obtenerRango1_5 (){
-        int n = lector.nextInt ();
-        if ( n > 6 || n < 1 ){
-            n = -1;
-        }
-        return n;
-    }// fin obEntPos
 
 }// fin-class EjercicioTexto13
