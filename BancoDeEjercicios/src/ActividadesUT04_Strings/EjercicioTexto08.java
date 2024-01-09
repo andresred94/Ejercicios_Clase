@@ -2,7 +2,7 @@ package ActividadesUT04_Strings;
 
 public class EjercicioTexto08 {
     public static void main ( String[] args ) {
-        System.out.println (ordenadorAmovil ( "3321" ));
+        System.out.println (ordenadorAmovil ( "789" ));
 
     }// fin mainç
 
@@ -47,6 +47,5 @@ public class EjercicioTexto08 {
         }
         return r.toString ();
     }// fin ordenadorAmovil
-
 
 }// fin-class EjercicioTexto08

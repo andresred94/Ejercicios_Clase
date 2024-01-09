@@ -7,7 +7,6 @@ public class EjercicioMain01 {
         if (args.length > 0) {
             //System.out.println ("Parametros recibidos:");
             System.out.printf("Parámetros recibidos:%n");
-
             // Imprime cada parámetro
             for (int i = 0; i < args.length; i++) {
                 System.out.printf("Parámetro %d : %s%n" , i + 1 , args[i]);

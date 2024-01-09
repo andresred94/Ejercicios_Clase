@@ -1,5 +1,8 @@
 package ActividadesUT04_Strings;
 
+import java.sql.Array;
+import java.util.Arrays;
+
 public class EjercicioTexto14 {
     public static void main(String[] args) {
         String palabara1 = "hola";
@@ -9,18 +12,21 @@ public class EjercicioTexto14 {
     }
 
     private static String unirCadena(String cad1, String cad2){
-        int cont1 = 0;
-        int cont2 = 0;
+
         char [] entrelazadas = new char[cad1.length() + cad2.length()];
-        for (int i = 0; i < entrelazadas.length; i++) {
-            char p1 = cad1.charAt(cont1);
-            entrelazadas[i] = p1;
-            cont1++;
-            char p2 = cad2.charAt(cont2);
-            entrelazadas[i] = p2;
-            cont2++;
+
+        for (int i = 0; i < cad1.length(); i++) {
+            char p1 = cad1.charAt(i);
+            for (int j = 0; j < cad2.length(); j++) {
+                char p2 = cad2.charAt(j);
+                for (int k = 0; k < entrelazadas.length - 1; k++) {
+                    entrelazadas[i] = p1;
+                    entrelazadas[i + 1] = p2;
+                }
+            }
         }
-        String rsp = entrelazadas.toString();
+
+        String rsp = Arrays.toString(entrelazadas);
         return rsp;
     }// fin unirCadena
 

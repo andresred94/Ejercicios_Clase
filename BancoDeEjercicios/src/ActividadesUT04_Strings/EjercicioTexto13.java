@@ -24,7 +24,6 @@ public class EjercicioTexto13 {
         }
 
         do {
-
             System.out.printf ( "Menú:%n" );
             System.out.printf ( "1.-Introducir tarea.%n" );
             System.out.printf ( "2.-Listar tareas.%n" );
@@ -62,7 +61,7 @@ public class EjercicioTexto13 {
 
     private static void eliminarTodas (String [] list){
         for ( int i = 0 ; i < list.length ; i++ ) {
-            list[i] = "";
+            list[i] = " ";
         }
     }// fin eliminarTodas
 
@@ -77,7 +76,14 @@ public class EjercicioTexto13 {
     }// fin listarTareas
 
     private static void introducirTarea (String [] list , String tar, int indc){
-        list[indc] = tar;
+
+        for (int i = 0; i < list.length; i++) {
+            if (tar == list[i]){
+                System.out.println("La tarea está repetida");
+            } else {
+                list[indc] = tar;
+            }
+        }
     }// fin introducirTarea
 
     private static int obtenerRango1_5 (){

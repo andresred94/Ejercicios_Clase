@@ -3,7 +3,6 @@ package ActividadesUT04_Strings;
 public class EjercicioTexto10 {
 
     public static void main ( String[] args ) {
-
         int n = 1001;
         System.out.println (capicua ( n ));
 
@@ -16,14 +15,14 @@ public class EjercicioTexto10 {
      */
     private static boolean capicua(int numero){
         String num = Integer.toString ( numero );
-        StringBuilder ninv = new StringBuilder ();
+        String ninv = "";
         int cont = 0;
         for ( int i = num.length () ; i > 0 ; i-- ) {
-            ninv.append ( num.charAt ( cont ) );
+            ninv += num.charAt(cont);
             cont++;
         }
 
-        return ninv.toString().equals( num );
+        return ninv.equals( num );
     }// fin capicua
 
 }// fin-class EjercicioTexto10

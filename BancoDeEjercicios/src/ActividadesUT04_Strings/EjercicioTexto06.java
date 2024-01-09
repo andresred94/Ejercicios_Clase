@@ -15,13 +15,12 @@ public class EjercicioTexto06 {
      * @return String del revéz
      */
     private static String cadenaDelReves(String cadena) {
-        StringBuilder resultado = new StringBuilder();
+        String resp = "";
         for ( int i = cadena.length () - 1 ; i >= 0 ; i-- ) {
-            char c = cadena.charAt ( i );
-            resultado.append ( c );
+            resp += cadena.charAt(i);
         }
 
-        return resultado.toString ();
+        return resp;
     }// fin cadenaDelReves
 
 }// fin-class EjercicioTexto06

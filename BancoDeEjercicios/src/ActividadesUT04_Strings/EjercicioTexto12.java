@@ -1,5 +1,7 @@
 package ActividadesUT04_Strings;
 
+import java.util.Arrays;
+
 public class EjercicioTexto12 {
 
     public static void main ( String[] args ) {
@@ -13,7 +15,11 @@ public class EjercicioTexto12 {
         int tamArray = palabras.length;
         boolean intercambiado;
 
-        do {// antes de entrar al loop se establece a false porque damos por hecho
+        Arrays.sort(palabras);
+        for (int i = 0; i < palabras.length; i++) {
+            System.out.println(palabras[i]);
+        }
+        /*do {// antes de entrar al loop se establece a false porque damos por hecho
             // que los indices están desordenados
             intercambiado = false;
 
@@ -34,9 +40,9 @@ public class EjercicioTexto12 {
 
             // tamArray-- para que compruebe los siguientes números hasta que intercambiado sea false
             tamArray--;
-        } while (intercambiado);
+        } while (intercambiado);*/
 
-        return palabras[0];
+        return palabras[(palabras.length)-1];
     }//fin palabraMasLarga
 
 }// fin-class EjercicioTexto12
