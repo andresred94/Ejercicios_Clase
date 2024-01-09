@@ -11,7 +11,11 @@ public class EjercicioTexto13 {
     }// fin main
 
     private static void menu (){
-
+        String [] listaDetareas = new String[10];
+        for (int i = 0; i < listaDetareas.length; i++) {
+            listaDetareas[i] = " ";
+        }
+        int cont = 0;
         int opEscg = 1;
         // control de errores
         while ( opEscg == -1 ){
@@ -20,8 +24,7 @@ public class EjercicioTexto13 {
         }
 
         do {
-            String [] listaDetareas = new String[10];
-            int cont = 0;
+
             System.out.printf ( "Menú:%n" );
             System.out.printf ( "1.-Introducir tarea.%n" );
             System.out.printf ( "2.-Listar tareas.%n" );
@@ -30,29 +33,29 @@ public class EjercicioTexto13 {
             System.out.printf ( "5.-Salir.%n" );
             System.out.printf ( "Escoge una de las opciones = " );
             opEscg = obtenerRango1_5 ();
-            switch ( opEscg ){
+            lector.nextLine();
 
-                case 1:
-                    lector.nextLine();
-                    System.out.printf ( "Introduce el nombre de la tarea = " );
-                    String tags = lector.nextLine ();
-                    introducirTarea ( listaDetareas, tags , cont);
-                    ++cont;
-                    break;
-                case 2:
-                    listarTareas ( listaDetareas );
-                    break;
-                case 3:
-                    System.out.printf ( "¿Qué tarea quieres eliminar?" );
-                    int n = lector.nextInt ();
-                    eliminarTarea ( listaDetareas , n );
-                    break;
-                case 4:
-                    eliminarTodas ( listaDetareas );
-                    break;
-                default:
-                    break;
-            }// fin switch
+            if (opEscg == 1){
+                System.out.printf ( "Introduce el nombre de la tarea = " );
+                String tags = lector.nextLine ();
+                introducirTarea ( listaDetareas, tags , cont);
+                ++cont;
+            }
+
+            if (opEscg == 2){
+                listarTareas ( listaDetareas );
+            }
+
+            if (opEscg == 3 ){
+                System.out.printf ( "Introduce la tarea que quieres eliminar = " );
+                int n = lector.nextInt ();
+                eliminarTarea ( listaDetareas , n );
+            }
+
+            if (opEscg == 4){
+                eliminarTodas ( listaDetareas );
+            }
+
         }while ( opEscg!= 5 );
 
     }// fin menu
@@ -64,7 +67,7 @@ public class EjercicioTexto13 {
     }// fin eliminarTodas
 
     private static void eliminarTarea (String [] list , int indc){
-        list[indc] = " ";
+        list[indc - 1] = " ";
     }// fin elimitarTarea
 
     private static void listarTareas (String [] list){
