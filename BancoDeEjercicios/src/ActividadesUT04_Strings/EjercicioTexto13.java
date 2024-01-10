@@ -1,5 +1,6 @@
 package ActividadesUT04_Strings;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class EjercicioTexto13 {
@@ -12,9 +13,7 @@ public class EjercicioTexto13 {
 
     private static void menu (){
         String [] listaDetareas = new String[10];
-        for (int i = 0; i < listaDetareas.length; i++) {
-            listaDetareas[i] = " ";
-        }
+        Arrays.fill ( listaDetareas , " " );
         int cont = 0;
         int opEscg;
         do {
@@ -24,12 +23,12 @@ public class EjercicioTexto13 {
             System.out.printf ( "3.-Eliminar tarea.%n" );
             System.out.printf ( "4.-Eliminar todas las tareas.%n" );
             System.out.printf ( "5.-Salir.%n" );
-            System.out.printf ( "Escoge una de las opciones = " );
+            System.out.print ( "Escoge una de las opciones = " );
             opEscg = lector.nextInt ();// solo lee los entero pero no lee la tecla "enter"
             lector.nextLine();// cosume el caracter "enter"
             // control de errores
             while ( opEscg < 1 ){
-                System.out.printf ( "Error : opción no válida. Vuelve a ingresar una opción = " );
+                System.out.print ( "Error : opción no válida. Vuelve a ingresar una opción = " );
                 opEscg = lector.nextInt ();
             }
 
@@ -44,7 +43,7 @@ public class EjercicioTexto13 {
                     listarTareas ( listaDetareas );
                     break;
                 case 3:
-                    System.out.printf ( "Introduce la tarea que quieres eliminar = " );
+                    System.out.print ( "Introduce la tarea que quieres eliminar = " );
                     int n = lector.nextInt ();
                     eliminarTarea ( listaDetareas , n );
                     break;
@@ -58,9 +57,7 @@ public class EjercicioTexto13 {
     }// fin menu
 
     private static void eliminarTodas (String [] list){
-        for ( int i = 0 ; i < list.length ; i++ ) {
-            list[i] = " ";
-        }
+        Arrays.fill ( list , " " );
     }// fin eliminarTodas
 
     private static void eliminarTarea (String [] list , int indc){
@@ -71,11 +68,11 @@ public class EjercicioTexto13 {
         System.out.printf ("Listado de tareas:%n");
         boolean esCierto = false;
         for ( int i = 0 ; i < list.length ; i++ ) {
-            if ( !(list[i] == " ") ){
+            if ( !(list[i].equals ( " " )) ){
                 System.out.printf ( "tarea nº%d: %s%n" , i + 1 , list[i] );
             }
-            for ( int j = 0 ; j < list.length ; j++ ) {
-                if ( list[0].length () == 1 && list[j].length () == 1){
+            for ( String s : list ) {
+                if ( list[0].length () == 1 && s.length () == 1 ) {
                     esCierto = true;
                 }
             }
@@ -88,10 +85,9 @@ public class EjercicioTexto13 {
     }// fin listarTareas
 
     private static void introducirTarea (String [] list , String tar, int indc){
-
-        for (int i = 0; i < list.length; i++) {
-            if (tar.equals(list[i])) {
-                System.out.println("La tarea está repetida");
+        for ( String s : list ) {
+            if ( tar.equals ( s ) ) {
+                System.out.println ( "La tarea está repetida" );
                 return; // Salir del método si la tarea ya existe
             }
         }

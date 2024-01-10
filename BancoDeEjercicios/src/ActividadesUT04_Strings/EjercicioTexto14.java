@@ -1,8 +1,5 @@
 package ActividadesUT04_Strings;
 
-import java.sql.Array;
-import java.util.Arrays;
-
 public class EjercicioTexto14 {
     public static void main(String[] args) {
         String palabara1 = "holaaaaaaaaaa";
@@ -28,7 +25,6 @@ public class EjercicioTexto14 {
 
         }
 
-        String rsp = new String(entrelazadas);
-        return rsp;
+        return new String ( entrelazadas );
     }// fin unirCadena
 }// fin-class EjercicioTexto14
