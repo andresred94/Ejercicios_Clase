@@ -34,7 +34,7 @@ public class EjercicioTexto13 {
 
             switch ( opEscg ){
                 case 1:
-                    System.out.printf ( "Introduce el nombre de la tarea = " );
+                    System.out.print ( "Introduce el nombre de la tarea = " );
                     String tags = lector.nextLine ();
                     introducirTarea ( listaDetareas, tags , cont);
                     ++cont;
