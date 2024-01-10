@@ -33,26 +33,25 @@ public class EjercicioTexto13 {
                 opEscg = lector.nextInt ();
             }
 
-            if (opEscg == 1){
-                System.out.printf ( "Introduce el nombre de la tarea = " );
-                String tags = lector.nextLine ();
-                introducirTarea ( listaDetareas, tags , cont);
-                ++cont;
-            }
-
-            if (opEscg == 2){
-                listarTareas ( listaDetareas );
-            }
-
-            if (opEscg == 3 ){
-                System.out.printf ( "Introduce la tarea que quieres eliminar = " );
-                int n = lector.nextInt ();
-                eliminarTarea ( listaDetareas , n );
-            }
-
-            if (opEscg == 4){
-                eliminarTodas ( listaDetareas );
-            }
+            switch ( opEscg ){
+                case 1:
+                    System.out.printf ( "Introduce el nombre de la tarea = " );
+                    String tags = lector.nextLine ();
+                    introducirTarea ( listaDetareas, tags , cont);
+                    ++cont;
+                    break;
+                case 2:
+                    listarTareas ( listaDetareas );
+                    break;
+                case 3:
+                    System.out.printf ( "Introduce la tarea que quieres eliminar = " );
+                    int n = lector.nextInt ();
+                    eliminarTarea ( listaDetareas , n );
+                    break;
+                case 4:
+                    eliminarTodas ( listaDetareas );
+                    break;
+            }// fin switch
 
         }while ( opEscg!= 5 );
 
