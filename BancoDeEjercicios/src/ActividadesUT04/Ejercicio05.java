@@ -51,10 +51,8 @@ public class Ejercicio05 {
         for ( int i = 0 ; i < numeroApuestas ; i++ ) {
             // guardamos los números que hemos generado en la primitiva
             int[] numsEsco = Ejercicio04.primitiva ();
-
             // recorremos la primitiva generada anteriormente
             for ( int j = 0 ; j < primGen[i].length ; j++ ) {
-
                 // recorre el array generado en primitiva()
                 for ( int k = 0 ; k < numsEsco.length ; k++ ) {
                     // Si coincide con el valor aleatorio generado en la primitiva
@@ -62,7 +60,6 @@ public class Ejercicio05 {
                     if ( primGen[i][j] == numsEsco[k] ) {
                         primGen[i][j] = -1;
                     }
-
                 }// for-k
             }// for-j
         }// for-i
@@ -74,13 +71,11 @@ public class Ejercicio05 {
                     System.out.printf ( "X " );
                 } else {
                     System.out.printf ( "%d " , primGen[i][j] );
-                }
-            }
+                }// fin if
+            }// fin for-j
             System.out.println ();
-        }
-
+        }// fin for-i
         return primGen;
-
     }// fin generarPrimitiva
 
     // <-- métodos secundarios --> //
@@ -94,6 +89,4 @@ public class Ejercicio05 {
         if ( n < 1 || n > 8 ) n = -1;
         return n;
     }// fin obtenerEnteropos1_8
-
-
 }// fin-class Ejercicio05
