@@ -5,17 +5,18 @@ import java.util.Arrays;
 public class EjercicioTexto09 {
 
     public static void main ( String[] args ) {
-
-        String [] palabras = {"andres","martin","bravo","castro"};
+        String [] palabras = {"andres","martin","bravo","castro","ABC"};
         String [] resp = ordenarAlfabeticamente ( palabras );
         System.out.println (Arrays.toString ( resp ));
-
-
     }// fin main
 
     private static String [] ordenarAlfabeticamente(String [] palabras){
         int n = palabras.length;
-
+        // pasamos a minusculas para evitar errores
+        for (int i = 0; i < palabras.length; i++) {
+            String s = palabras[i];
+            palabras[i] = s.toLowerCase();
+        }
         // Método de la burbuja para ordenar alfabéticamente
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
@@ -28,8 +29,9 @@ public class EjercicioTexto09 {
                     palabras[j + 1] = temp;
                 }
             }
-        }
-        //Arrays.sort ( palabras );
+        }// fin for
+
+        // Arrays.sort ( palabras );
         return palabras;
     }// fin ordenarAlfabeticamente
 

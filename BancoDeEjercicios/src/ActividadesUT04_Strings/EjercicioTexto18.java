@@ -35,7 +35,6 @@ public class EjercicioTexto18 {
                 }
             }
 
-
             rsp += carCif;
         }
         return rsp;

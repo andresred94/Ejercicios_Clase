@@ -71,10 +71,10 @@ public class EjercicioTexto13 {
             if ( !(list[i].equals ( " " )) ){
                 System.out.printf ( "tarea nº%d: %s%n" , i + 1 , list[i] );
             }
-            for ( String s : list ) {
-                if ( list[0].length () == 1 && s.length () == 1 ) {
-                    esCierto = true;
-                }
+        }
+        for ( String s : list ) {
+            if ( s.length () == 1 ) {
+                esCierto = true;
             }
         }
 

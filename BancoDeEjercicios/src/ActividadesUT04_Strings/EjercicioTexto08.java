@@ -12,40 +12,35 @@ public class EjercicioTexto08 {
      * @return teclas presionadas en el movil
      */
     private static String ordenadorAmovil(String numero){
-        StringBuilder r =  new StringBuilder ();
+        String r = "";
         for ( int i = 0 ; i < numero.length () ; i++ ) {
             char c = numero.charAt ( i );
+
             switch ( c ){
                 case '7':
-                    r.append ( "1" );
+                    r.replaceAll("7","1");
                     break;
                 case '8':
-                    r.append ( "2" );
+                    r.replaceAll("[8]","[2]");
                     break;
                 case '9':
-                    r.append ( "3" );
-                    break;
-                case '4':
-                    r.append ( "4" );
-                    break;
-                case '5':
-                    r.append ( "5" );
-                    break;
-                case '6':
-                    r.append ( "6" );
+                    r.replaceAll("[9]","[3]");
                     break;
                 case '1':
-                    r.append ( "7" );
+                    r.replaceAll("[1]","[7]");
                     break;
                 case '2':
-                    r.append ( "8" );
+                    r.replaceAll("[2]","[8]");;
                     break;
                 case '3':
-                    r.append ( "9" );
+                    r.replaceAll("[3]","[9]");;
+                    break;
+                default:
+                    r.replaceAll("[456]","[456]");
                     break;
             }
         }
-        return r.toString ();
+        return r;
     }// fin ordenadorAmovil
 
 }// fin-class EjercicioTexto08

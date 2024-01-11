@@ -23,7 +23,7 @@ public class EjercicioTexto14 {
                 entrelazadas[index++] = cad2.charAt(j);
             }
 
-        }
+        }// fin for
 
         return new String ( entrelazadas );
     }// fin unirCadena

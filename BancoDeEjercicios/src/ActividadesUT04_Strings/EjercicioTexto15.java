@@ -1,7 +1,6 @@
 package ActividadesUT04_Strings;
 
 public class EjercicioTexto15 {
-
     public static void main ( String[] args ) {
         int dni = 52053342;
         System.out.println (obtenerNIF ( dni ));
@@ -16,7 +15,7 @@ public class EjercicioTexto15 {
     private static String obtenerNIF(int dni){
         String letreas = "TRWAGMYFPDXBNJZSQVHLCKE";
         int numResto = dni % 23;
-        String resp = Integer.toString ( dni );
+        String resp = Integer.toString ( dni );// pasamos el entero a String
         resp += letreas.charAt ( numResto );
         return resp;
     }
