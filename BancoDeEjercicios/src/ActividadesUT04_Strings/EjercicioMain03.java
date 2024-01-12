@@ -10,6 +10,6 @@ public class EjercicioMain03 {
         }
         double total = media / args.length;
         System.out.printf ("La nota media es %.1f" , total);
-    }// fin main
 
+    }// fin main
 }// fin-class EjercicioMain03

@@ -1,4 +1,4 @@
-package LaboratorioDePruebas;
+package LaboratorioDePruebas.PrimeraEva;
 
 public class ImprimirVariables {
 

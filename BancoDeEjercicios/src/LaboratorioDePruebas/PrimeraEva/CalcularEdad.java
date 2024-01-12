@@ -1,4 +1,4 @@
-package LaboratorioDePruebas;
+package LaboratorioDePruebas.PrimeraEva;
 
 import java.util.Scanner;
 

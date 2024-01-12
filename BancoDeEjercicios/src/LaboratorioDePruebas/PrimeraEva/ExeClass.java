@@ -1,6 +1,4 @@
-package LaboratorioDePruebas;
-
-import LaboratorioDePruebas.Arrays.CreandoArrays;
+package LaboratorioDePruebas.PrimeraEva;
 
 public class ExeClass {
     public static void main(String[] args) {
