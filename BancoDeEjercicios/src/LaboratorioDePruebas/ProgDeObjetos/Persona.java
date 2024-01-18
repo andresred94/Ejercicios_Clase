@@ -1,11 +1,31 @@
 package LaboratorioDePruebas.ProgDeObjetos;
 
 public class Persona {
-    private String nombre;
+    // Atributos
+    public String nombre;
     private int edad;
-    private float estatura;
-    private String dni ="51739920V";
+    private double estatura;
+    private String dni ="";
 
+    // métodos constructores
+    public Persona(String nombre, int edad, double estatura, String dni) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.estatura = estatura;
+        this.dni = dni;
+    }
+
+    public Persona (String nombre){
+        this.nombre = nombre;
+    }
+    public Persona() {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.estatura = estatura;
+        this.dni = dni;
+    }
+
+    // Getters y Setters
     public String getNombre() {
         return nombre;
     }
@@ -19,22 +39,35 @@ public class Persona {
     }
 
     public void setEdad(int edad) {
-        this.edad = edad;
-    }
+        if (edad > 0){
+            this.edad = edad;
+        } else {
+            System.err.println("La edad no puede ser negativa.");
+        }
+    }// fin setEdad
 
-    public float getEstatura() {
+    public double getEstatura() {
         return estatura;
     }
 
     public void setEstatura(float estatura) {
-        this.estatura = estatura;
-    }
+        if (estatura > 0){
+            this.estatura = estatura;
+        } else {
+            System.err.println("La estatura no puede ser negativa.");
+        }
+    }// fin setEstatura
 
     public String getDni() {
         return dni;
     }
 
     public void setDni(String dni) {
-        this.dni = dni;
+        if (dni.length() > 9 || dni.length() < 9){
+            System.err.println("El DNI tiene que tener 8 números y una letra");
+        } else {
+            this.dni = dni;
+        }
     }
+
 }// fin-class Persona

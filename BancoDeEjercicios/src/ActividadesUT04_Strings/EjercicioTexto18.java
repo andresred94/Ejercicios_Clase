@@ -3,8 +3,8 @@ package ActividadesUT04_Strings;
 public class EjercicioTexto18 {
 
     public static void main ( String[] args ) {
-        String frase = " hola mundo z";
-        int cod = -1;
+        String frase ="Et tu, Brute?";
+        int cod = 3;
         System.out.println (cifrarCesar ( frase,cod ));
     }// fin main
 

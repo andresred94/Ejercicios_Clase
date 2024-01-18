@@ -3,7 +3,7 @@ package ActividadesUT04_Strings;
 public class EjercicioTexto16 {
 
     public static void main ( String[] args ) {
-        String dni = "52053342H";
+        String dni = "52043342H";
         System.out.println (esValidoNIF ( dni ));
 
     }// fin main
