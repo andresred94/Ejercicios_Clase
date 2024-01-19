@@ -1,41 +1,54 @@
 package ActividadesUT04_Strings;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class EjercicioTexto19 {
     private static Scanner lector = new Scanner(System.in);
     public static void main(String[] args) {
-        String palAdiv = "Informatica";
-        String pal = "";
+        int cont = 0;
+        String laqueSeAdivina = "Informatica";
 
-        boolean esCierto = false;
+        char [] palEscondida = new char[laqueSeAdivina.length ()];
+
+        Arrays.fill ( palEscondida , '-' );
+
+
         boolean adivinada = false;
 
 
         do {
+            laqueSeAdivina = laqueSeAdivina.toLowerCase ();
+            System.out.println("Palabra a adivinar: " + String.valueOf(palEscondida));
             System.out.print("Ingresa una letra para adivinar la palabra = ");
-            char c = lector.next().charAt(0);
-            for (int i = 0; i < palAdiv.length(); i++) {
-                if (c == palAdiv.charAt(i)){
-                    esCierto = true;
-                } else {
-                  esCierto = false;
+            char charLeido = lector.next().charAt(0);
+
+            boolean esLamisma = false;
+
+            for (int i = 0; i < laqueSeAdivina.length(); i++) {
+                char letra = laqueSeAdivina.charAt(i);
+                if (charLeido == letra){
+                    palEscondida[i] = charLeido;
+                    esLamisma = true;
                 }
             }
-            if (esCierto){
-                pal += c;
-                System.out.println(pal);
+
+            if (!esLamisma){
+                cont++;
+                System.out.println("Letra incorrecta. Intentos restantes: " + (7 - cont));
             }
 
-
-            if (palAdiv.length() == pal.length()){
+            if (Arrays.equals(palEscondida, laqueSeAdivina.toCharArray())) {
                 adivinada = true;
-            }
-            if (adivinada){
-                System.out.println(pal);
+                System.out.println("¡Enhorabuena! Has adivinado la palabra: " + laqueSeAdivina);
             }
 
+        } while (!adivinada && cont < 7);
 
-        } while (!adivinada);
+        if (!adivinada) {
+            System.out.println("Lo siento, has agotado tus intentos. La palabra era: " + laqueSeAdivina);
+        }
+
+        lector.close();
     }
 }// fin-class Ejercicio19

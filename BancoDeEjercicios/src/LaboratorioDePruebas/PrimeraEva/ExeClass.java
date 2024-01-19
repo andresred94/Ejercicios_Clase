@@ -2,10 +2,9 @@ package LaboratorioDePruebas.PrimeraEva;
 
 public class ExeClass {
     public static void main(String[] args) {
-        ImprimirVariables.ejecutarPrograma();
+
         //ComoUsarScanner.ejecutarPrograma();
         //MostrarEdad.ejecutarPrograma();
-        //CalcularEdad.ejecutarPrograma();
         //ComprobarDesbordamiento.ejecutarPrograma();
         //DiaDeLaSemana.ejecutarPrograma ();
         //CreandoFunciones.ejecutarPrograma ();

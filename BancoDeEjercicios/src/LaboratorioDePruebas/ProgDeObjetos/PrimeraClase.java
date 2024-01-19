@@ -9,6 +9,8 @@ public class PrimeraClase {
         System.out.println(p2.getNombre());
         // El constructor vacio inicializa los valores a NULL o 0
         System.out.printf("Nombre: %s Edad: %d Estatura: %.1f DNI: %s ",p3.getNombre(),p3.getEdad(),p3.getEstatura(),p3.getDni());
+        // ToDo Crear una clase Cuenta corriente
+        // tiene que tener DNI , nombreTitular y Saldo
 
     }// fin main
 }// fin-class Personas
