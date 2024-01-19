@@ -29,6 +29,4 @@ class EsCapicuaTest {
         n1.setnNormal ( cadenaCapicua );
         assertEquals ( true, n1.siEsCapicua ());
     }
-
-
 }

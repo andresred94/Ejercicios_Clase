@@ -5,54 +5,52 @@ import java.util.Scanner;
 public class DiaDeLaSemana {
 
     // atributos
-    static Scanner lector = new Scanner(System.in);
+    private int diaS;
+
+    // contructores
+    public DiaDeLaSemana(){
+        diaS = 0;
+    }
+
+    // setters y getters
+    public void setDiaS ( int diaS ) {
+        this.diaS = diaS;
+    }
+    public int getDiaS () {
+        return diaS;
+    }
 
     //<-- metodos principales -->//
-
-    public static void ejecutarPrograma (){
-        int diaS;
-        String dia = "";
-
-        System.out.println ("Ingresa un número del 1 al 7");
-        diaS = pedirDia ();
-
-        switch ( diaS ){
+    public String comprobarDia (){
+        String rsp = "";
+            switch ( diaS ){
             case 1:
-                dia = "Lunes";
+                rsp = "Lunes";
                 break;
             case 2:
-                dia = "Martes";
+                rsp = "Martes";
                 break;
             case 3:
-                dia = "Miercoles";
+                rsp = "Miercoles";
                 break;
             case 4:
-                dia = "Jueves";
+                rsp = "Jueves";
                 break;
             case 5:
-                dia = "Viernes";
+                rsp = "Viernes";
                 break;
             case 6:
-                dia = "Sábado";
+                rsp = "Sábado";
                 break;
             case 7:
-                dia = "Domingo";
+                rsp = "Domingo";
                 break;
             default:
-                System.out.println ("Error: no has ingresado un dia valido");
+                rsp = "Error: no has ingresado un dia valido";
                 break;
         }// fin switch
-
-        System.out.printf ( "El dia equivalente es: %s" , dia );
-
+        return rsp;
     }// fin ejecutarPrograma
 
     //<-- metodos secundarios -->//
-
-    public static int pedirDia (){
-        int n;
-        n = lector.nextInt ();
-       return n ;
-    }// fin pedirDia
-
 }// fin-class DiaDeLaSemana

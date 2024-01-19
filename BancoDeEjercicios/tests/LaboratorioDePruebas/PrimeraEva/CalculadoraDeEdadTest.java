@@ -14,6 +14,5 @@ class CalculadoraDeEdadTest {
         int resultado = calc1.getEdad ();
         assertEquals ( 30 , resultado );
 
-
     }
 }
