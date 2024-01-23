@@ -1,6 +1,5 @@
 package LaboratorioDePruebas.PrimeraEva;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class MayorEdad {

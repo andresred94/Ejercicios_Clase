@@ -15,4 +15,4 @@ class Array1DSumaTest {
         int [] esperado = {2,4,6,8,10};
         assertArrayEquals ( esperado , resultado );
     }
-}
+}// fin-class Array1DSumaTest

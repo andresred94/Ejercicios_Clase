@@ -6,8 +6,8 @@ public class Circulo {
     private static double radio , area , longitud ;
 
     // métodos constructores
-    public Circulo(){
-
+    public Circulo(double radio){
+        this.radio = radio;
     }
 
     // setter y getter

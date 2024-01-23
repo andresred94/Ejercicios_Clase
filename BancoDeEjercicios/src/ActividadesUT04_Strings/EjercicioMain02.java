@@ -6,7 +6,6 @@ public class EjercicioMain02 {
 
     public static void main ( String[] args ) {
         System.out.println (comprobarPosicion ( args ));
-
     }// fin main
 
     private static int comprobarPosicion (String[] cad){

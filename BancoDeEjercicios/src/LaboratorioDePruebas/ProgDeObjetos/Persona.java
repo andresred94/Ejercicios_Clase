@@ -56,7 +56,7 @@ public class Persona {
     }// fin getDni
     public void setDni(String dni) {
         if (dni.length() > 9 || dni.length() < 9){
-            System.err.println("El DNI tiene que tener 8 números y una letra");
+            System.out.println("El DNI tiene que tener 8 números y una letra");
         } else {
             this.dni = dni;
         }
